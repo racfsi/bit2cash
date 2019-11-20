@@ -1,0 +1,19 @@
+.App-header {
+  background: #20175a;
+  height: 80px;
+  padding: 0px 60px;
+}
+.App-header .pure-g {
+  height: 100%;
+}
+.App-logo {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: flex-start;
+  width: 100%;
+}
+.App-logo img {
+  height: 40%;
+  width: auto;
+}
