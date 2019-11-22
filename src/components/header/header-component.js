@@ -1,6 +1,6 @@
 import React from "react";
-import '../../assets/css/pure-min.css';
-import '../../assets/css/grids-responsive-min.css';
+import "../../assets/css/pure-min.css";
+import "../../assets/css/grids-responsive-min.css";
 import logo from "../../assets/images/logo.png";
 import "./header-component.css";
 class Header extends React.Component {
@@ -9,21 +9,26 @@ class Header extends React.Component {
       <header className="App-header">
         <div class="pure-g">
           <div class="pure-u-4-24">
-            <div className="App-logo" >
+            <div className="App-logo">
               <img src={logo} alt="logo" />
             </div>
           </div>
-          <div class="pure-u-1-4">            
-            <p>¿Cómo usarlo?</p>
-          </div>
-          <div class="pure-u-1-4">
-            <p>Comercios</p>
-          </div>
-          <div class="pure-u-1-4">
-            <p>¿Qué es bitcoin?</p>
-          </div>
-          <div class="pure-u-1-4">
-            <p>Contáctanos</p>
+          <div class="pure-u-20-24">
+            <ul class="am_header_nav">
+              <li>
+                <a>¿Cómo usarlo?</a>
+              </li>
+              <li>
+                <a>Comercios</a>
+              </li>
+              <li>
+                <a>¿Qué es bitcoin?</a>
+              </li>
+              <li>
+                <a>Contáctanos</a>
+              </li>
+            </ul>
+            <p></p>
           </div>
         </div>
       </header>
