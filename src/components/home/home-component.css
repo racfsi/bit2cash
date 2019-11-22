@@ -1,0 +1,51 @@
+/*
+==============================================
+Genera styles |Home
+==============================================
+*/
+section {
+  min-height: 500px;
+  padding: 60px 40px;
+  text-align: center;
+  width: 100%;
+}
+/*
+==============================================
+Banner Home
+==============================================
+*/
+.bannerHome {
+  height: 90vh;
+}
+/*
+==============================================
+Section como usarlo |Home
+==============================================
+*/
+.sectionComoUsarlo {
+  background: var(--color-morado);
+  min-height: 700px;
+}
+/*
+==============================================
+Section comercio |Home
+==============================================
+*/
+.sectionComercios {
+}
+/*
+==============================================
+Section que es |Home
+==============================================
+*/
+.sectionQueEs {
+  background: var(--color-morado);
+}
+/*
+==============================================
+Section nuestros aliados |Home
+==============================================
+*/
+.sectionAliados {
+  background: #eaeaef;
+}

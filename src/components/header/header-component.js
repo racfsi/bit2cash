@@ -1,7 +1,8 @@
 import React from "react";
-import "./header-component.css";
+import '../../assets/css/pure-min.css';
+import '../../assets/css/grids-responsive-min.css';
 import logo from "../../assets/images/logo.png";
-import pure from "../../assets/css/pure-min.css";
+import "./header-component.css";
 class Header extends React.Component {
   render() {
     return (

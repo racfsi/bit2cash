@@ -119,3 +119,13 @@ article {
 .overflow {
   overflow: auto;
 }
+/*
+==============================================
+Style Variables color
+==============================================
+*/
+
+:root {
+  --color-amarillo: #F0B61C;
+  --color-morado: #20175a;
+}

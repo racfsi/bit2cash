@@ -1,5 +1,5 @@
 .App-header {
-  background: #20175a;
+  background: var(--color-morado);
   height: 80px;
   padding: 0px 60px;
 }
