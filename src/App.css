@@ -14,15 +14,34 @@ h5,
 h6,
 p,
 a {
-  margin: 0;
-  padding: 0;
-  text-decoration: none;
-  color: inherit;
   box-sizing: border-box;
+  color: inherit;
+  letter-spacing: 0;
+  margin: 0;
+  text-decoration: none;
+  padding: 0;
+}
+h1,
+h2{
+  font-size: 66px !important;
+  letter-spacing: -2px;
+}
+h1,
+h2,
+h3 {
+  font-family: "Gotham Bold";
+}
+ul > li{
+  font-family: "Gotham Medium";
+  text-transform: uppercase;
+}
+p {
+  font-family: "Gotham Book";
+  font-size: 22px;
 }
 html {
   -ms-text-size-adjust: none;
-  font-size: 16px;
+  /* font-size: 16px; */
 }
 a:active {
   color: inherit;
@@ -126,6 +145,10 @@ Style Variables color
 */
 
 :root {
-  --color-amarillo: #F0B61C;
-  --color-morado: #1E1759;
+  --color-amarillo: #f0b61c;
+  --color-gris: #f1f1f2;
+  --color-grisOscuro: #808184;
+  --color-morado: #1e1759;
+  --color-moradoClaro: #252034;
+  --color-moradoSuave: #4A2B94;
 }

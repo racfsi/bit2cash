@@ -1,14 +1,20 @@
 import React from "react";
 import "./home-component.css";
 import Maps from "../map/map-component";
+import charGrap from "../../assets/images/home/chart-graphics.png";
+import charImg from "../../assets/images/home/chart-bottom.png";
+import SwipeableList from "../aliados/aliados-component";
 
 class Home extends React.Component {
   render() {
+    var mySwiper = new Swiper(".swiper-container", {
+      /* ... */
+    });
     return (
       <div>
         <section class="bannerHome woowContentFull ">
           <div class="pure-g">
-            <div class="pure-u-3-4">
+            <div class="pure-u-15-24">
               <div class="divLeftHeaderHome">
                 <div class="titleHeaderHome">
                   <h1>
@@ -24,18 +30,27 @@ class Home extends React.Component {
                 </div>
               </div>
             </div>
-            <div class="pure-u-1-4">
+            <div class="pure-u-1-3">
               <div class="divRightHeaderHome">
+                <div class="chartsImgToptHeaderHome"></div>
                 <div class="infoDivHeaderHome">
                   <ul>
                     <li>COP</li>
-                    <li>USD</li>
+                    <li class="active">USD</li>
                     <li>EUR</li>
                   </ul>
-                  <h3>BTC</h3>
-                  <p>9,437.05 USD</p>
-                  <div class="chartsHeaderHome">
-                    <p>-1.01%</p>
+                  <div class="infoDivDetHeaderHome">
+                    <h3>BTC</h3>
+                    <p class="infoDivDetPrHeaderHome">9,437.05 USD</p>
+                    <div class="chartsHeaderHome">
+                      <div class="chartsImgHeaderHome">
+                        <img src={charGrap}></img>
+                      </div>
+                      <p>-1.01%</p>
+                    </div>
+                    <div class="chartsImgFootHeaderHome">
+                      <img src={charImg}></img>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -44,13 +59,95 @@ class Home extends React.Component {
         </section>
         <section class="sectionComoUsarlo woowContentFull" id="sectionComoUso">
           <div class="pure-g">
-            <h2>¿Cómo usarlo?</h2>
+            <div class="pure-u-1-1">
+              <h2>¿Cómo usarlo?</h2>
+            </div>
+          </div>
+          <div class="stepsUse">
+            <div class="stepsUseLeft">
+              <img
+                src={require("../../assets/images/home/steps-use-1.png")}
+              ></img>
+              <div class="stepsUseTxt">
+                <p>Descarga e instala Telegram</p>
+                <p>en tu smartphone (es gratis).</p>
+              </div>
+              <div class="stepsUseMore">
+                <ul>
+                  <li>
+                    <img
+                      src={require("../../assets/images/home/google-play.jpg")}
+                    ></img>
+                  </li>
+                  <li>
+                    <img
+                      src={require("../../assets/images/home/app-store.jpg")}
+                    ></img>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="stepsUseRight">
+              <img
+                src={require("../../assets/images/home/steps-use-2.png")}
+              ></img>
+              <div class="stepsUseTxt">
+                <p>
+                  <span>Regístrate aquí</span> llenando el formulario
+                </p>
+                <p>básico de información.</p>
+              </div>
+            </div>
+          </div>
+          <div class="stepsUse">
+            <div class="stepsUseLeft stepsUseLeft3">
+              <img
+                src={require("../../assets/images/home/steps-use-3.png")}
+              ></img>
+              <div class="stepsUseTxt">
+                <p>
+                  Abre un diálogo con <span>@bit2cashbot</span>
+                </p>
+                <p>y digita el monto en pesos (COP)</p>
+                <p>de tu transacción.</p>
+              </div>
+            </div>
+            <div class="stepsUseRight stepsUseRight4">
+              <img
+                src={require("../../assets/images/home/steps-use-4.png")}
+              ></img>
+              <div class="stepsUseTxt">
+                <p>Se generará un código QR que podrás compartir</p>
+                <p>con tus clientes y permitirles pagar </p>
+                <p>con sus bitcoins (BTC).</p>
+              </div>
+            </div>
+          </div>
+          <div class="stepsUse">
+            <div class="stepsUseOne">
+              <img
+                src={require("../../assets/images/home/steps-use-5.png")}
+              ></img>
+              <div class="stepsUseTxt">
+                <p>
+                  Recibirás el monto en <strong>pesos</strong> (COP){" "}
+                </p>
+                <p>en la cuenta bancaria de tu preferencia.</p>
+              </div>
+            </div>
           </div>
         </section>
         <section class="sectionComercios woowContentFull" id="sectionComercios">
           <div class="pure-g">
             <div class="pure-u-lg-1-1 pure-u-md-1-1 pure-u-sm-1-1 pure-u-1-1">
               <h2>Comercios</h2>
+              <p class="txtSectionComercios">
+                Estos son todos los lugares que aceptan <span>bitcoins</span> en
+                Colombia. Acércate<br></br> a ellos y paga con tus{" "}
+                <span>bitcoins</span>. tu comercio también acepta{" "}
+                <span>bitcoins</span>, <br></br>Si contáctanos y con gusto
+                pondremos tu información en nuestra lista.
+              </p>
             </div>
           </div>
           <div class="pure-g">
@@ -60,6 +157,41 @@ class Home extends React.Component {
                   <h3>Canoa Taberna Japonesa</h3>
                   <div class="ratingInfoMapSelectHome">
                     <p>4.6 (747)</p>
+                    <p>Restaurante</p>
+                  </div>
+                  <div class="imgInfoMapSelectHome">
+                    <img
+                      src={require("../../assets/images/home/comercio-1.jpg")}
+                    ></img>
+                  </div>
+                  <div class="dataInfoMapSelectHome">
+                    <ul>
+                      <li>
+                        <div class="icoInfoMap">
+                          <p>D</p>
+                        </div>
+                        <p>Cta. 4a # 66 - 78, Bogotá, Cund.</p>
+                      </li>
+                      <li>
+                        <div class="icoInfoMap">
+                          <p>P</p>
+                        </div>
+                        <p>311 237 95 84</p>
+                      </li>
+                      <li>
+                        <div class="icoInfoMap">
+                          <p>H</p>
+                        </div>
+                        <p>Cierra pronto: 12:00a 15:00, 19:00a 22:00</p>
+                      </li>
+                      <li>
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetuer adipiscing
+                          elit, sed diam nonummy nibh euismod tincidunt ut
+                          laoreet dolore{" "}
+                        </p>
+                      </li>
+                    </ul>
                   </div>
                 </div>
                 <div class="mapComerciosHome">
@@ -81,23 +213,39 @@ class Home extends React.Component {
                 aceptando Bitcoins. En Colombia está comenzando a usarse y
                 Bit2Cash te ayudará a hacerlo.
               </p>
+            </div>
+            <div class="divRightHeaderHome">
+              <div class="chartsImgToptHeaderHome"></div>
               <div class="infoDivHeaderHome">
                 <ul>
                   <li>COP</li>
-                  <li>USD</li>
+                  <li class="active">USD</li>
                   <li>EUR</li>
                 </ul>
-                <h3>BTC</h3>
-                <p>9,437.05 USD</p>
-                <div class="chartsHeaderHome">
-                  <p>-1.01%</p>
+                <div class="infoDivDetHeaderHome">
+                  <h3>BTC</h3>
+                  <p class="infoDivDetPrHeaderHome">9,437.05 USD</p>
+                  <div class="chartsHeaderHome">
+                    <div class="chartsImgHeaderHome">
+                      <img src={charGrap}></img>
+                    </div>
+                    <p>-1.01%</p>
+                  </div>
+                  <div class="chartsImgFootHeaderHome">
+                    <img src={charImg}></img>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </section>
         <section class="sectionAliados woowContentFull" id="sectionAliados">
-          <h2>Nuestros aliados</h2>
+          <div class="pure-u-lg-1-1 pure-u-md-1-1 pure-u-sm-1-1 pure-u-1-1">
+            <h2>Nuestros aliados</h2>
+          </div>
+          <div class="pure-u-lg-1-1 pure-u-md-1-1 pure-u-sm-1-1 pure-u-1-1">
+            <SwipeableList />
+          </div>
         </section>
       </div>
     );

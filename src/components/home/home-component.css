@@ -5,7 +5,7 @@ Genera styles |Home
 */
 section {
   min-height: 500px;
-  padding: 60px 40px;
+  padding: 60px 120px;
   text-align: center;
   width: 100%;
 }
@@ -14,8 +14,134 @@ section {
 Banner Home
 ==============================================
 */
+.divLeftHeaderHome {
+  position: relative;
+  top: 50px;
+}
 .bannerHome {
+  background: url("../../assets/images/home/banner-background.jpg") center
+    center no-repeat;
+  background-size: cover;
   height: 90vh;
+}
+.titleHeaderHome {
+  width: 80%;
+}
+.titleHeaderHome h1 {
+  color: var(--color-morado);
+
+  text-align: left;
+}
+.txtHeaderHome {
+  color: var(--color-moradoClaro);
+  padding-top: 20px;
+  position: relative;
+  text-align: left;
+  width: 80%;
+}
+.txtHeaderHome p {
+  font-size: 40px;
+}
+.txtHeaderHome::before {
+  background: var(--color-morado);
+  content: "";
+  height: 5px;
+  left: 0;
+  position: absolute;
+  top: -10px;
+  width: 60%;
+}
+.divRightHeaderHome {
+  float: right;
+  position: relative;
+  top: 160px;
+  width: 350px;
+}
+.infoDivHeaderHome {
+  background: var(--color-gris);
+  padding: 30px;
+  position: relative;
+}
+.infoDivHeaderHome ul {
+  align-items: center;
+  background: #fff;
+  border-radius: 20px;
+  color: var(--color-morado);
+  display: flex;
+  font-size: 20px;
+  justify-content: center;
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+.infoDivHeaderHome ul li {
+  height: 100%;
+  padding: 8px 0px;
+  text-align: center;
+  width: 33.333%;
+}
+.infoDivHeaderHome ul li.active {
+  background: var(--color-moradoSuave);
+  color: #fff;
+}
+.infoDivDetHeaderHome {
+  padding: 4px;
+  text-align: left;
+}
+.infoDivDetHeaderHome h3 {
+  color: var(--color-moradoClaro);
+  font-size: 68px;
+  margin: 10px 0px;
+}
+.infoDivDetPrHeaderHome {
+  border-bottom: 2px solid var(--color-grisOscuro);
+  color: var(--color-moradoClaro);
+  font-family: "Gotham Medium";
+  font-size: 28px;
+  padding-bottom: 14px;
+}
+.chartsHeaderHome {
+  border-bottom: 2px dashed var(--color-grisOscuro);
+  border-top: 2px dashed var(--color-grisOscuro);
+  margin: 20px 0px;
+  padding: 10px 0px;
+}
+.chartsImgHeaderHome {
+  align-items: center;
+  display: flex;
+  height: 100px;
+  justify-content: center;
+  overflow: hidden;
+  width: 100%;
+}
+.chartsImgHeaderHome img {
+  height: auto;
+  width: 100%;
+}
+.chartsHeaderHome p {
+  color: var(--color-grisOscuro);
+  font-family: "Gotham Medium";
+  font-size: 28px;
+  text-align: right;
+}
+.chartsImgToptHeaderHome {
+  background: var(--color-morado);
+  height: 16px;
+  left: 50%;
+  position: absolute;
+  top: -8px;
+  transform: translateX(-50%);
+  width: 105%;
+}
+.chartsImgFootHeaderHome {
+  bottom: -25px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
+.chartsImgFootHeaderHome img {
+  height: auto;
+  width: 100%;
 }
 /*
 ==============================================
@@ -23,15 +149,153 @@ Section como usarlo |Home
 ==============================================
 */
 .sectionComoUsarlo {
-  background: var(--color-morado);
-  min-height: 700px;
+  background: url("../../assets/images/home/comousarlo-background.jpg") center
+    center no-repeat;
+  background-size: cover;
+  min-height: 1000px;
+  position: relative;
+  padding-bottom: 0px;
+}
+.sectionComoUsarlo h2 {
+  color: var(--color-amarillo);
+  text-align: center;
+}
+.sectionComoUsarlo::after {
+  background: var(--color-amarillo);
+  bottom: 0;
+  content: "";
+  height: 200px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
+.stepsUse {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+  width: 100%;
+}
+.stepsUseLeft,
+.stepsUseRight {
+  width: 32%;
+}
+.stepsUseRight {
+  position: relative;
+  top: 270px;
+}
+.stepsUseTxt p {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+}
+.stepsUseTxt span {
+  color: var(--color-amarillo);
+}
+.stepsUseMore {
+  width: 100%;
+}
+.stepsUseMore ul {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  margin-top: 40px;
+}
+.stepsUseMore ul li {
+  height: 50px;
+  margin: 0px 10px;
+  overflow: hidden;
+}
+.stepsUseMore ul li img {
+  height: 100%;
+  width: auto;
+}
+.stepsUseLeft3 {
+  position: relative;
+  right: -40px;
+}
+.stepsUseRight4 {
+  left: 30px;
+  top: 290px;
+}
+.stepsUseRight4 .stepsUseTxt {
+  left: 60px;
+  position: relative;
+}
+.stepsUseOne {
+  margin-top: 56px;
+  position: relative;
+  top: 37px;
+  z-index: 2;
+}
+.stepsUseOne .stepsUseTxt p {
+  color: var(--color-moradoClaro);
+  font-size: 20px;
+  position: relative;
+  top: -100px;
 }
 /*
 ==============================================
 Section comercio |Home
 ==============================================
 */
-.sectionComercios {
+.sectionComercios h2 {
+  color: var(--color-morado);
+}
+.txtSectionComercios {
+  color: var(--color-moradoClaro);
+  margin: 40px 0px;
+}
+.txtSectionComercios span {
+  font-weight: 600;
+  font-style: italic;
+}
+.infoMapsHome {
+  align-items: center;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  -webkit-box-shadow: 0px 0px 5px 1px rgba(207, 205, 207, 1);
+  -moz-box-shadow: 0px 0px 5px 1px rgba(207, 205, 207, 1);
+  box-shadow: 0px 0px 5px 1px rgba(207, 205, 207, 1);
+}
+.infoMapSelectHome {
+  height: 100%;
+  padding: 20px;
+  text-align: left;
+  width: 350px;
+}
+.infoMapSelectHome h3 {
+  color: #000;
+}
+.ratingInfoMapSelectHome p {
+  color: #000;
+  font-size: 18px;
+}
+.imgInfoMapSelectHome {
+  margin: 20px 0px;
+}
+.dataInfoMapSelectHome ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+.dataInfoMapSelectHome ul li {
+  align-items: center;
+  display: flex;
+  justify-content: flex-start;
+  margin: 10px 0px;
+}
+.dataInfoMapSelectHome ul li .icoInfoMap {
+  margin-right: 20px;
+}
+.dataInfoMapSelectHome ul li p {
+  color: #000;
+  font-size: 14px;
+  text-transform: capitalize;
 }
 /*
 ==============================================
@@ -39,7 +303,25 @@ Section que es |Home
 ==============================================
 */
 .sectionQueEs {
-  background: var(--color-morado);
+  background: url("../../assets/images/home/quees-background.jpg") center center
+    no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.sectionQueEs h2 {
+  color: var(--color-amarillo);
+}
+.infoQueEs {
+  color: #fff;
+  margin: 0 auto;
+  padding: 40px 0px;
+  width: 60%;
+}
+.sectionQueEs .divRightHeaderHome {
+  float: inherit;
+  margin: 0 auto;
+  top: 70px;
+  z-index: 99999;
 }
 /*
 ==============================================
@@ -48,4 +330,8 @@ Section nuestros aliados |Home
 */
 .sectionAliados {
   background: #eaeaef;
+  z-index: 1;
+}
+.sectionAliados h2 {
+  color: var(--color-morado);
 }
