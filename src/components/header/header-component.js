@@ -15,7 +15,9 @@ class Header extends React.Component {
         <div class="pure-g">
           <div class="pure-u-4-24">
             <div className="App-logo">
-              <img src={require("../../assets/images/logo.png")}></img>
+              <Link to="/" className="link">
+                <img src={require("../../assets/images/logo.png")}></img>
+              </Link>
             </div>
           </div>
           <div class="pure-u-20-24">

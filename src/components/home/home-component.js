@@ -1,7 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 /*COMPONENTES*/
 import Header from "../header/header-component";
 import Footer from "../footer/footer-component";
+import BitInfo from "../infobit/infobit-component";
 import Maps from "../map/map-component";
 import SimpleSlider from "../aliados/aliados-component";
 /*ESTILOS*/
@@ -15,10 +17,14 @@ class Home extends React.Component {
           <div class="menuLogin">
             <ul>
               <li>
-                <a>INGRESO</a>
+                <Link to="/login" className="link">
+                  INGRESO
+                </Link>
               </li>
               <li>
-                <a>REGISTRO</a>
+                <Link to="/register" className="link">
+                  REGISTRO
+                </Link>
               </li>
             </ul>
           </div>
@@ -40,33 +46,7 @@ class Home extends React.Component {
               </div>
             </div>
             <div class="pure-u-1-3">
-              <div class="divRightHeaderHome">
-                <div class="chartsImgToptHeaderHome"></div>
-                <div class="infoDivHeaderHome">
-                  <ul>
-                    <li>COP</li>
-                    <li class="active">USD</li>
-                    <li>EUR</li>
-                  </ul>
-                  <div class="infoDivDetHeaderHome">
-                    <h3>BTC</h3>
-                    <p class="infoDivDetPrHeaderHome">9,437.05 USD</p>
-                    <div class="chartsHeaderHome">
-                      <div class="chartsImgHeaderHome">
-                        <img
-                          src={require("../../assets/images/home/chart-graphics.png")}
-                        ></img>
-                      </div>
-                      <p>-1.01%</p>
-                    </div>
-                    <div class="chartsImgFootHeaderHome">
-                      <img
-                        src={require("../../assets/images/home/chart-bottom.png")}
-                      ></img>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <BitInfo />
             </div>
           </div>
         </section>
@@ -227,33 +207,7 @@ class Home extends React.Component {
                 Bit2Cash te ayudará a hacerlo.
               </p>
             </div>
-            <div class="divRightHeaderHome">
-              <div class="chartsImgToptHeaderHome"></div>
-              <div class="infoDivHeaderHome">
-                <ul>
-                  <li>COP</li>
-                  <li class="active">USD</li>
-                  <li>EUR</li>
-                </ul>
-                <div class="infoDivDetHeaderHome">
-                  <h3>BTC</h3>
-                  <p class="infoDivDetPrHeaderHome">9,437.05 USD</p>
-                  <div class="chartsHeaderHome">
-                    <div class="chartsImgHeaderHome">
-                      <img
-                        src={require("../../assets/images/home/chart-graphics.png")}
-                      ></img>
-                    </div>
-                    <p>-1.01%</p>
-                  </div>
-                  <div class="chartsImgFootHeaderHome">
-                    <img
-                      src={require("../../assets/images/home/chart-bottom.png")}
-                    ></img>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <BitInfo />
           </div>
         </section>
         <section

@@ -22,7 +22,7 @@ a {
   padding: 0;
 }
 h1,
-h2{
+h2 {
   font-size: 66px !important;
   letter-spacing: -2px;
 }
@@ -31,7 +31,7 @@ h2,
 h3 {
   font-family: "Gotham Bold";
 }
-ul > li{
+ul > li {
   font-family: "Gotham Medium";
   text-transform: uppercase;
 }
@@ -147,9 +147,10 @@ Style Variables color
 :root {
   --color-amarillo: #f0b61c;
   --color-gris: #f1f1f2;
+  --color-grisBorder: #c9c9cd;
   --color-grisOscuro: #808184;
   --color-morado: #1e1759;
   --color-moradoClaro: #252034;
-  --color-moradoEnlace: #211C56;
-  --color-moradoSuave: #4A2B94;
+  --color-moradoEnlace: #211c56;
+  --color-moradoSuave: #4a2b94;
 }

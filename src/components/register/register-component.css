@@ -1,0 +1,30 @@
+/*
+==============================================
+Section Login
+==============================================
+*/
+.sectionRegister {
+  background: url("../../assets/images/login/login-background.jpg") center
+    center no-repeat;
+  background-size: cover;
+  border-top: 3px dashed var(--color-moradoSuave);
+  min-height: 1300px;
+  position: relative;
+}
+.sectionRegister h2 {
+  color: var(--color-amarillo);
+  margin-bottom: 100px;
+}
+.sectionRegister .formContact {
+  border-top: 5px solid rgba(255, 162, 0, 1);
+  border-top-left-radius: 0;
+}
+.sectionRegister .formContact p {
+  color: #000;
+  font-family: "Gotham Medium";
+  margin-bottom: 40px;
+}
+.sectionRegister .moreLogin p,
+.sectionRegister .moreLogin a {
+  font-size: 16px;
+}
