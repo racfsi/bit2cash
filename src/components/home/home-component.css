@@ -11,6 +11,73 @@ section {
 }
 /*
 ==============================================
+Submenu Login Home
+==============================================
+*/
+.menuLogin {
+  background: rgba(255, 162, 0, 1);
+  background: -moz-linear-gradient(
+    top,
+    rgba(255, 162, 0, 1) 0%,
+    rgba(255, 183, 0, 1) 100%
+  );
+  background: -webkit-gradient(
+    left top,
+    left bottom,
+    color-stop(0%, rgba(255, 162, 0, 1)),
+    color-stop(100%, rgba(255, 183, 0, 1))
+  );
+  background: -webkit-linear-gradient(
+    top,
+    rgba(255, 162, 0, 1) 0%,
+    rgba(255, 183, 0, 1) 100%
+  );
+  background: -o-linear-gradient(
+    top,
+    rgba(255, 162, 0, 1) 0%,
+    rgba(255, 183, 0, 1) 100%
+  );
+  background: -ms-linear-gradient(
+    top,
+    rgba(255, 162, 0, 1) 0%,
+    rgba(255, 183, 0, 1) 100%
+  );
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 162, 0, 1) 0%,
+    rgba(255, 183, 0, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffa200', endColorstr='#ffb700', GradientType=0 );
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  -webkit-box-shadow: 0px 0px 14px 0px rgba(173, 171, 173, 1);
+  -moz-box-shadow: 0px 0px 14px 0px rgba(173, 171, 173, 1);
+  box-shadow: 0px 0px 14px 0px rgba(173, 171, 173, 1);
+  position: absolute;
+  right: 190px;
+  top: 0px;
+  width: 250px;
+}
+.menuLogin ul {
+  align-items: center;
+  display: flex;
+  height: 55px;
+  justify-content: center;
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+.menuLogin ul li a {
+  color: var(--color-moradoEnlace);
+  font-weight: 600;
+}
+.menuLogin ul li:first-child {
+  margin-right: 20px;
+  border-right: 2px solid var(--color-moradoEnlace);
+  padding-right: 20px;
+}
+/*
+==============================================
 Banner Home
 ==============================================
 */
@@ -23,6 +90,7 @@ Banner Home
     center no-repeat;
   background-size: cover;
   height: 90vh;
+  position: relative;
 }
 .titleHeaderHome {
   width: 80%;
@@ -334,4 +402,18 @@ Section nuestros aliados |Home
 }
 .sectionAliados h2 {
   color: var(--color-morado);
+  margin-bottom: 40px;
+}
+.sectionAliados .slick-prev:before,
+.sectionAliados .slick-next:before {
+  color: var(--color-morado);
+  font-size: 30px;
+}
+/*
+==============================================
+Section before Footer
+==============================================
+*/
+.sectionBeforeFooter {
+  padding-bottom: 250px;
 }

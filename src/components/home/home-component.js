@@ -1,18 +1,27 @@
 import React from "react";
-import "./home-component.css";
+/*COMPONENTES*/
+import Header from "../header/header-component";
+import Footer from "../footer/footer-component";
 import Maps from "../map/map-component";
-import charGrap from "../../assets/images/home/chart-graphics.png";
-import charImg from "../../assets/images/home/chart-bottom.png";
-import SwipeableList from "../aliados/aliados-component";
-
+import SimpleSlider from "../aliados/aliados-component";
+/*ESTILOS*/
+import "./home-component.css";
 class Home extends React.Component {
   render() {
-    var mySwiper = new Swiper(".swiper-container", {
-      /* ... */
-    });
     return (
       <div>
+        <Header />
         <section class="bannerHome woowContentFull ">
+          <div class="menuLogin">
+            <ul>
+              <li>
+                <a>INGRESO</a>
+              </li>
+              <li>
+                <a>REGISTRO</a>
+              </li>
+            </ul>
+          </div>
           <div class="pure-g">
             <div class="pure-u-15-24">
               <div class="divLeftHeaderHome">
@@ -44,12 +53,16 @@ class Home extends React.Component {
                     <p class="infoDivDetPrHeaderHome">9,437.05 USD</p>
                     <div class="chartsHeaderHome">
                       <div class="chartsImgHeaderHome">
-                        <img src={charGrap}></img>
+                        <img
+                          src={require("../../assets/images/home/chart-graphics.png")}
+                        ></img>
                       </div>
                       <p>-1.01%</p>
                     </div>
                     <div class="chartsImgFootHeaderHome">
-                      <img src={charImg}></img>
+                      <img
+                        src={require("../../assets/images/home/chart-bottom.png")}
+                      ></img>
                     </div>
                   </div>
                 </div>
@@ -227,26 +240,34 @@ class Home extends React.Component {
                   <p class="infoDivDetPrHeaderHome">9,437.05 USD</p>
                   <div class="chartsHeaderHome">
                     <div class="chartsImgHeaderHome">
-                      <img src={charGrap}></img>
+                      <img
+                        src={require("../../assets/images/home/chart-graphics.png")}
+                      ></img>
                     </div>
                     <p>-1.01%</p>
                   </div>
                   <div class="chartsImgFootHeaderHome">
-                    <img src={charImg}></img>
+                    <img
+                      src={require("../../assets/images/home/chart-bottom.png")}
+                    ></img>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </section>
-        <section class="sectionAliados woowContentFull" id="sectionAliados">
+        <section
+          class="sectionAliados sectionBeforeFooter woowContentFull"
+          id="sectionAliados"
+        >
           <div class="pure-u-lg-1-1 pure-u-md-1-1 pure-u-sm-1-1 pure-u-1-1">
             <h2>Nuestros aliados</h2>
           </div>
           <div class="pure-u-lg-1-1 pure-u-md-1-1 pure-u-sm-1-1 pure-u-1-1">
-            <SwipeableList />
+            <SimpleSlider />
           </div>
         </section>
+        <Footer />
       </div>
     );
   }

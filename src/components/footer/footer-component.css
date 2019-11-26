@@ -1,4 +1,44 @@
-footer{
-    background: var(--color-amarillo);
-    padding: 40px;
+footer {
+  background: url("../../assets/images/footer/footer-background.jpg") center
+    center no-repeat;
+  background-size: cover;
+  padding: 40px 100px;
+  position: relative;
+}
+footer::before {
+  background: url("../../assets/images/footer/footer-border.png") center center
+    no-repeat;
+  background-size: cover;
+  content: "";
+  height: 5px;
+  left: 0;
+  position: absolute;
+  top: -4px;
+  width: 100%;
+}
+.icoFooter {
+  left: 50%;
+  position: absolute;
+  top: -130px;
+  transform: translate(-50%, 0);
+}
+.infoDivFooter h3 {
+  color: #000;
+  margin-bottom: 20px;
+}
+.infoDivFooter ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+.infoDivFooter ul li {
+  margin: 0px;
+  margin-bottom: 10px;
+}
+.infoDivFooter ul li:last-child {
+  margin-bottom: 0px;
+}
+.infoDivFooter ul li p {
+  color: #000;
+  font-size: 16px;
 }

@@ -1,17 +1,23 @@
 import React from "react";
-import "./App.css";
-import Header from "./components/header/header-component";
+import { BrowserRouter, Route } from "react-router-dom";
+/*COMPONENTES*/
 import Home from "./components/home/home-component";
-import Footer from "./components/footer/footer-component";
+import Contact from "./components/contact/contact-component";
+/*ESTILOS*/
+import "./App.css";
 function App() {
   return (
     <div>
-      <Header />
-      <Home />
-      <div>
-        HOLA  
-      </div>
-      <Footer />
+      <BrowserRouter>
+        <div className="sans-serif">
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route exact path="/contacto">
+            <Contact />
+          </Route>
+        </div>
+      </BrowserRouter>
     </div>
   );
 }

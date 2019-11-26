@@ -1,9 +1,13 @@
 import React from "react";
+import { Link } from "react-router-dom";
+/*SLIDER*/
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+/*STYLES*/
+import "./header-component.css";
 import "../../assets/css/pure-min.css";
 import "../../assets/css/grids-responsive-min.css";
 import "../../assets/css/fonts.css";
-import "./header-component.css";
-import logo from "../../assets/images/logo.png";
 class Header extends React.Component {
   render() {
     return (
@@ -11,7 +15,7 @@ class Header extends React.Component {
         <div class="pure-g">
           <div class="pure-u-4-24">
             <div className="App-logo">
-              <img src={logo} alt="logo" />
+              <img src={require("../../assets/images/logo.png")}></img>
             </div>
           </div>
           <div class="pure-u-20-24">
@@ -26,7 +30,9 @@ class Header extends React.Component {
                 <a>¿Qué es bitcoin?</a>
               </li>
               <li>
-                <a>Contáctanos</a>
+                <Link to="/contacto" className="link">
+                  CONTÁCTANOS
+                </Link>
               </li>
             </ul>
             <p></p>

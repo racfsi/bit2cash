@@ -1,63 +1,78 @@
 import React from "react";
-import Swiper from "react-id-swiper";
-// Version <= 2.3.2
-import "react-id-swiper/lib/styles/css/swiper.css";
-// Version >= 2.4.0
-import "swiper/css/swiper.css";
-
-const SwipeableList = ({ children, scrollElement, threshold }) => {
-  const [blockSwipe, setBlockSwipe] = useState(false);
-
-  useEffect(() => {
-    window.addEventListener("mouseup", handleDragEnd);
-    window.addEventListener("touchend", handleDragEnd);
-
-    return () => {
-      window.removeEventListener("mouseup", handleDragEnd);
-      window.removeEventListener("touchend", handleDragEnd);
+import Slider from "react-slick";
+class SimpleSlider extends React.Component {
+  render() {
+    var settings = {
+      dots: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 4,
+      slidesToScroll: 4
     };
-  }, []);
-
-  useEffect(() => {
-    if (scrollElement) {
-      scrollElement.addEventListener("scroll", handleScroll);
-    }
-
-    return () => {
-      if (scrollElement) {
-        scrollElement.removeEventListener("scroll", handleScroll);
-      }
-    };
-  }, [scrollElement]);
-
-  const handleDragStart = () => setBlockSwipe(false);
-
-  const handleDragEnd = () => setBlockSwipe(false);
-
-  const handleScroll = () => setBlockSwipe(true);
-
-  return (
-    <div
-      className={styles.swipeableList}
-      onMouseDown={handleDragStart}
-      onTouchStart={handleDragStart}
-      onScroll={handleScroll}
-      data-testid="list-wrapper"
-    >
-      {React.Children.map(children, child =>
-        React.cloneElement(child, { blockSwipe, threshold })
-      )}
-    </div>
-  );
-};
-
-SwipeableList.propTypes = {
-  children: PropTypes.node,
-  scrollElement:
-    typeof EventTarget !== "undefined"
-      ? PropTypes.instanceOf(EventTarget)
-      : PropTypes.any,
-  threshold: PropTypes.number
-};
-
-export default SwipeableList;
+    return (
+      <Slider {...settings}>
+        <div>
+          <div>
+            <img
+              src={require("../../assets/images/aliados/aliado-1.png")}
+            ></img>
+          </div>
+          <div>
+            <img
+              src={require("../../assets/images/aliados/aliado-2.png")}
+            ></img>
+          </div>
+        </div>
+        <div>
+          <div>
+            <img
+              src={require("../../assets/images/aliados/aliado-3.png")}
+            ></img>
+          </div>
+          <div>
+            <img
+              src={require("../../assets/images/aliados/aliado-4.png")}
+            ></img>
+          </div>
+        </div>
+        <div>
+          <div>
+            <img
+              src={require("../../assets/images/aliados/aliado-5.png")}
+            ></img>
+          </div>
+          <div>
+            <img
+              src={require("../../assets/images/aliados/aliado-6.png")}
+            ></img>
+          </div>
+        </div>
+        <div>
+          <div>
+            <img
+              src={require("../../assets/images/aliados/aliado-7.png")}
+            ></img>
+          </div>
+          <div>
+            <img
+              src={require("../../assets/images/aliados/aliado-8.png")}
+            ></img>
+          </div>
+        </div>
+        <div>
+          <div>
+            <img
+              src={require("../../assets/images/aliados/aliado-1.png")}
+            ></img>
+          </div>
+          <div>
+            <img
+              src={require("../../assets/images/aliados/aliado-2.png")}
+            ></img>
+          </div>
+        </div>
+      </Slider>
+    );
+  }
+}
+export default SimpleSlider;
