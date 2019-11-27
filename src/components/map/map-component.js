@@ -96,7 +96,8 @@ export class Maps extends React.Component {
               dir: store.dir,
               tel: store.tel,
               hor: store.hor,
-              desc: store.desc
+              desc: store.desc,
+              view: true
             })
           }
         />
@@ -112,6 +113,7 @@ export class Maps extends React.Component {
 
     return (
       <div class="infoMapsHome">
+        {viewInfo == true &&
         <div class="infoMapSelectHome ">
           <h3>{this.state.nombre}</h3>
           <div class="ratingInfoMapSelectHome">
@@ -155,6 +157,7 @@ export class Maps extends React.Component {
             </ul>
           </div>
         </div>
+        }
         <div class="mapComerciosHome">
           <Map
             google={this.props.google}
