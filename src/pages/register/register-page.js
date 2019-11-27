@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 /*COMPONENTES*/
-import Header from "../header/header-component";
-import Footer from "../footer/footer-component";
+import Header from "../../components/header/header-component";
+import Footer from "../../components/footer/footer-component";
 /*ESTILOS*/
-import "./register-component.css";
+import "./register-page.css";
 class Register extends React.Component {
   constructor(props) {
     super(props);

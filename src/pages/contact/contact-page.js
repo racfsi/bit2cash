@@ -1,10 +1,10 @@
 import React from "react";
 import axios from "axios";
 /*COMPONENTES*/
-import Header from "../header/header-component";
-import Footer from "../footer/footer-component";
+import Header from "../../components/header/header-component";
+import Footer from "../../components/footer/footer-component";
 /*ESTILOS*/
-import "./contact-component.css";
+import "./contact-page.css";
 class Contact extends React.Component {
   constructor(props) {
     super(props);

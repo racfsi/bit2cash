@@ -1,13 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 /*COMPONENTES*/
-import Header from "../header/header-component";
-import Footer from "../footer/footer-component";
-import BitInfo from "../infobit/infobit-component";
-import Maps from "../map/map-component";
-import SimpleSlider from "../aliados/aliados-component";
+import Header from "../../components/header/header-component";
+import Footer from "../../components/footer/footer-component";
+import BitInfo from "../../components/infobit/infobit-component";
+import Maps from "../../components/map/map-component";
+import SimpleSlider from "../../components/aliados/aliados-component";
 /*ESTILOS*/
-import "./home-component.css";
+import "./home-page.css";
 class Home extends React.Component {
   render() {
     return (

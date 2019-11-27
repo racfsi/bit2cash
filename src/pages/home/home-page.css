@@ -10,10 +10,10 @@ section {
   width: 100%;
 }
 /*
-==============================================
-Submenu Login Home
-==============================================
-*/
+  ==============================================
+  Submenu Login Home
+  ==============================================
+  */
 .menuLogin {
   background: rgba(255, 162, 0, 1);
   background: -moz-linear-gradient(
@@ -77,10 +77,10 @@ Submenu Login Home
   padding-right: 20px;
 }
 /*
-==============================================
-Banner Home
-==============================================
-*/
+  ==============================================
+  Banner Home
+  ==============================================
+  */
 .divLeftHeaderHome {
   position: relative;
   top: 50px;
@@ -212,10 +212,10 @@ Banner Home
   width: 100%;
 }
 /*
-==============================================
-Section como usarlo |Home
-==============================================
-*/
+  ==============================================
+  Section como usarlo |Home
+  ==============================================
+  */
 .sectionComoUsarlo {
   background: url("../../assets/images/home/comousarlo-background.jpg") center
     center no-repeat;
@@ -305,10 +305,10 @@ Section como usarlo |Home
   top: -100px;
 }
 /*
-==============================================
-Section comercio |Home
-==============================================
-*/
+  ==============================================
+  Section comercio |Home
+  ==============================================
+  */
 .sectionComercios h2 {
   color: var(--color-morado);
 }
@@ -366,10 +366,10 @@ Section comercio |Home
   text-transform: capitalize;
 }
 /*
-==============================================
-Section que es |Home
-==============================================
-*/
+  ==============================================
+  Section que es |Home
+  ==============================================
+  */
 .sectionQueEs {
   background: url("../../assets/images/home/quees-background.jpg") center center
     no-repeat;
@@ -392,10 +392,10 @@ Section que es |Home
   z-index: 99999;
 }
 /*
-==============================================
-Section nuestros aliados |Home
-==============================================
-*/
+  ==============================================
+  Section nuestros aliados |Home
+  ==============================================
+  */
 .sectionAliados {
   background: #eaeaef;
   z-index: 1;
@@ -410,10 +410,10 @@ Section nuestros aliados |Home
   font-size: 30px;
 }
 /*
-==============================================
-Section before Footer
-==============================================
-*/
+  ==============================================
+  Section before Footer
+  ==============================================
+  */
 .sectionBeforeFooter {
   padding-bottom: 250px;
 }
