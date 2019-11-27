@@ -28,3 +28,13 @@ Section Login
 .sectionRegister .moreLogin a {
   font-size: 16px;
 }
+
+@media only screen and (max-width: 480px) {
+  .sectionRegister{
+    padding: 15px;
+    padding-bottom: 143px;
+  }
+  .sectionRegister h2{
+    font-size: 45px;
+  }
+}

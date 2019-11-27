@@ -42,3 +42,35 @@ footer::before {
   color: #000;
   font-size: 16px;
 }
+
+
+
+@media only screen and (max-width: 1200px) {
+  footer .pure-u-4-24{
+    width: 100%;
+  }
+  footer .pure-g{
+    flex-wrap: wrap;
+  }
+}
+
+
+
+
+@media only screen and (max-width: 480px) {
+  footer{
+    padding: 10px;
+  }
+  footer > div{
+    flex-wrap: wrap;
+  }
+  .infoDivFooter{
+    text-align: center;
+    margin-top: 15px;
+  }
+  .App-logo{
+    margin-top: 5px;
+    padding: 0;
+  }
+
+}

@@ -109,3 +109,12 @@ Section Login
   margin-top: 20px;
   text-align: center !important;
 }
+@media only screen and (max-width: 480px) {
+  .sectionLogin{
+    padding: 15px;
+    padding-bottom: 145px;
+  }
+  .sectionLogin h2{
+    font-size: 45px;
+  }
+}

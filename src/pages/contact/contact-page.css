@@ -28,7 +28,7 @@ Section Contacto
   padding: 60px;
   position: absolute;
   transform: translateX(-50%);
-  width: 35%;
+  width: 660px;
 }
 .formContact input,
 .formContact textarea {
@@ -189,4 +189,33 @@ Section Mail Send
   font-family: "Gotham Bold";
   padding: 20px 40px;
   -webkit-appearance: none;
+}
+
+
+@media only screen and (max-width: 1400px) {
+  
+}
+
+
+@media only screen and (max-width: 900px) {
+  
+}
+@media only screen and (max-width: 480px) {
+  
+  .sectionContact{
+    padding: 15px;
+  }
+  .sectionContact h2{
+    font-size: 45px !important;
+  }
+  .formContact{
+    position: initial;
+    transform: none;
+    width: 100%;
+    padding: 30px 20px;
+    min-height: auto;
+  }
+  .formContact > form > div{
+    flex-wrap: wrap;
+  }
 }

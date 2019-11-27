@@ -12,3 +12,19 @@
   text-align: justify;
   width: 60%;
 }
+@media only screen and (max-width: 480px) {
+  .sectionTyc{
+    padding: 15px;
+    padding-bottom: 145px;
+  }
+  .sectionTyc h2{
+    font-size: 35px !important;
+  }
+  .txtSectionTyc{
+    width: 100%;
+    margin: 15px 0 30px;
+  }
+  .sectionTyc{
+    height: auto;
+  }
+}

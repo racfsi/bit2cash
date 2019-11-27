@@ -335,6 +335,7 @@ section {
 .infoMapSelectHome {
   height: 100%;
   padding: 20px;
+  position: relative;
   text-align: left;
   width: 350px;
 }
@@ -366,6 +367,70 @@ section {
   color: #000;
   font-size: 14px;
   text-transform: capitalize;
+}
+.closeInfoMap {
+  border: 1px solid;
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 0;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.filterMaps {
+  margin: 40px 0px;
+}
+.filterMaps ul {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+.filterMaps ul li {
+  background: #4a2b94;
+  border-radius: 20px;
+  color: #fff;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  padding: 10px;
+}
+.filterMaps ul li label {
+  margin-right: 20px;
+}
+.filterMaps ul li select {
+  background: #4a2b94;
+  border: none;
+  height: 100%;
+  width: 100%;
+}
+.filterMaps ul .textInput {
+  background: transparent !important;
+}
+.filterMaps ul .textInput input {
+  background: var(--color-gris);
+  border-radius: 14px;
+  border: 1px solid rgba(241, 241, 242, 1);
+  -webkit-box-shadow: inset 0px 0px 17px 0px rgba(241, 241, 242, 1);
+  -moz-box-shadow: inset 0px 0px 17px 0px rgba(241, 241, 242, 1);
+  box-shadow: inset 0px 0px 17px 0px rgba(241, 241, 242, 1);
+  color: #4a2b94;
+  height: 50px;
+  padding-left: 20px;
+  width: 200px;
+}
+.filterMaps ul .textInput input:focus {
+  border: none;
+  box-shadow: none;
+  outline-color: transparent;
 }
 /*
   ==============================================
@@ -418,4 +483,107 @@ section {
   */
 .sectionBeforeFooter {
   padding-bottom: 250px;
+}
+@media only screen and (max-width: 1200px) {
+  
+  .bannerHome{
+    padding: 10px 30px;
+    height: auto !important;
+  }
+  .txtHeaderHome{
+    width: 100% !important;
+    padding-bottom: 70px;
+  }
+  .sectionComoUsarlo {
+    padding: 30px 20px;
+  }
+  .stepsUse{
+    justify-content: none;
+  }
+  .stepsUseOne img, .stepsUseLeft, .stepsUseRight{
+    width: 100%;
+  }
+}
+
+
+
+@media only screen and (max-width: 480px) {
+  .menuLogin{
+    left: 0;
+    width: 100%;
+  }
+  .bannerHome, .sectionComoUsarlo, .sectionComercios, .sectionQueEs, .sectionAliados{
+    padding: 15px;
+    height: auto;
+  }
+  .bannerHome .pure-g{
+    flex-wrap: wrap;
+  }
+  .bannerHome .pure-g .pure-u-15-24, .bannerHome .pure-g .pure-u-1-3 {
+    width: 100%;
+  }
+  .titleHeaderHome h1, .sectionQueEs h2, .sectionAliados h2{
+    font-size: 35px !important;
+    text-align: center;
+    margin-top: 20px;
+  }
+  .titleHeaderHome, .txtHeaderHome{
+    width: 100%;
+  }
+  .txtHeaderHome::before{
+    display: none;
+  }
+  .txtHeaderHome p{
+    font-size: 25px;
+    margin-bottom: 100px;
+  }
+  .divRightHeaderHome, .stepsUseLeft3, .stepsUseRight{
+    position: initial;
+    width: 100%;
+  }
+  .sectionComoUsarlo h2, .sectionComercios h2{
+    font-size: 30px !important;
+  }
+  .stepsUseLeft, .stepsUseRight, .infoQueEs{
+    width: 100%;
+
+  }
+  .stepsUse{
+    display: block !important;
+    margin: 0;
+  }
+  .stepsUseLeft img, .stepsUseRight img{
+    width: 100%;
+  }
+  .stepsUseMore ul{
+    flex-wrap: wrap;
+    padding: 0;
+  }
+  .stepsUseMore ul li{
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  .sectionComoUsarlo{
+    min-height: auto;
+  }
+  .stepsUseRight4 .stepsUseTxt {
+    position: inherit;
+  }
+  .stepsUseOne{
+    margin: 0;
+    top: -25px;
+  }
+  .stepsUseOne img{
+    width: 100%;
+  }
+  .stepsUseOne .stepsUseTxt p{
+    top: 0;
+  }
+  .sectionAliados{
+    margin-bottom: 100px;
+    overflow: visible !important;
+  }
+  .slick-prev, .slick-next{
+    display: none !important;
+  }
 }

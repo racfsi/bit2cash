@@ -1,5 +1,14 @@
 import React from "react";
-import { BrowserRouter, Route } from "react-router-dom";
+
+
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+
+
 /*COMPONENTES*/
 // import Home from "./components/home/home-component";
 import Home from "./pages/home/home-page";
@@ -11,25 +20,36 @@ import Tyc from "./pages/tyc/tyc-page";
 import "./App.css";
 function App() {
   return (
-    <div>
-      <BrowserRouter>
-        <Route exact path="/">
-          <Home />
-        </Route>
-        <Route exact path="/contacto">
+
+    <Router>
+
+
+      <Switch>
+        <Route path="/contacto">
           <Contact />
         </Route>
-        <Route exact path="/login">
+        <Route path="/login">
           <Login />
         </Route>
-        <Route exact path="/register">
+        <Route path="/register">
           <Register />
         </Route>
-        <Route exact path="/terminos-y-condiciones">
+        <Route path="/terminos-y-condiciones">
           <Tyc />
         </Route>
-      </BrowserRouter>
-    </div>
+        <Route path="/">
+          <Home />
+        </Route>
+      </Switch>
+
+
+
+
+    </Router>
+
+
+
+
   );
 }
 

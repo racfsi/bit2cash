@@ -1,13 +1,17 @@
 import React from "react";
 import "./map-component.css";
 import { Map, GoogleApiWrapper, Marker } from "google-maps-react";
-
+import icomarker from "../../assets/images/marker-map.png";
 export class Maps extends React.Component {
   constructor(props) {
     super(props);
-
     this.state = {
-      view : "nada",
+      view: false,
+      list: false,
+      filterZona: "",
+      filterRubro: "",
+      filterName: "",
+      arrayStores: [],
       stores: [
         {
           nombre: "Crepes And Wafles",
@@ -17,6 +21,9 @@ export class Maps extends React.Component {
           hor: "11:45–20:30",
           latitude: 4.657928,
           longitude: -74.05781,
+          rating: 4.6,
+          cantrating: 700,
+          zona: "Norte",
           desc:
             "Lorem Ipsum Dolor Sit Amet, Consectetuer Adipiscing Elit, Sed Diam Nonummy Nibh Euismod Tincidunt Ut Laoreet Dolore"
         },
@@ -28,6 +35,9 @@ export class Maps extends React.Component {
           hor: "7:00–19:00",
           latitude: 4.656719,
           longitude: -74.070768,
+          rating: 2.6,
+          cantrating: 540,
+          zona: "Sur",
           desc:
             "Lorem Ipsum Dolor Sit Amet, Consectetuer Adipiscing Elit, Sed Diam Nonummy Nibh Euismod Tincidunt Ut Laoreet Dolore"
         },
@@ -39,6 +49,9 @@ export class Maps extends React.Component {
           hor: "11:00–20:00",
           latitude: 4.66701,
           longitude: -74.052323,
+          rating: 4.2,
+          cantrating: 10,
+          zona: "Oriente",
           desc:
             "Lorem Ipsum Dolor Sit Amet, Consectetuer Adipiscing Elit, Sed Diam Nonummy Nibh Euismod Tincidunt Ut Laoreet Dolore"
         },
@@ -50,6 +63,9 @@ export class Maps extends React.Component {
           hor: "10:00–21:00",
           latitude: 4.667487,
           longitude: -74.054681,
+          rating: 3.2,
+          cantrating: 2,
+          zona: "Occidente",
           desc:
             "Lorem Ipsum Dolor Sit Amet, Consectetuer Adipiscing Elit, Sed Diam Nonummy Nibh Euismod Tincidunt Ut Laoreet Dolore"
         },
@@ -61,6 +77,9 @@ export class Maps extends React.Component {
           hor: "6:30–20:30",
           latitude: 4.652822,
           longitude: -74.058616,
+          rating: 1.2,
+          cantrating: 1,
+          zona: "Norte",
           desc:
             "Lorem Ipsum Dolor Sit Amet, Consectetuer Adipiscing Elit, Sed Diam Nonummy Nibh Euismod Tincidunt Ut Laoreet Dolore"
         },
@@ -72,102 +91,214 @@ export class Maps extends React.Component {
           hor: "11:00–21:00",
           latitude: 4.658405,
           longitude: -74.057536,
+          rating: 4.8,
+          cantrating: 20,
+          zona: "Sur",
           desc:
             "Lorem Ipsum Dolor Sit Amet, Consectetuer Adipiscing Elit, Sed Diam Nonummy Nibh Euismod Tincidunt Ut Laoreet Dolore"
         }
       ]
     };
+    this.state.arrayStores = this.state.stores;
   }
-
-  displayMarkers = () => {
-    return this.state.stores.map((store, index) => {
-      return (
-        <Marker
-          key={index}
-          id={index}
-          position={{
-            lat: store.latitude,
-            lng: store.longitude
-          }}
-          onClick={() =>
-            this.setState({
-              nombre: store.nombre,
-              rubro: store.rubro,
-              dir: store.dir,
-              tel: store.tel,
-              hor: store.hor,
-              desc: store.desc,
-              view: true
-            })
-          }
-        />
-      );
+  onChangeFilter(event, id) {
+    event.preventDefault();
+    const value = event.target.value;
+    const actualArray = [];
+    this.state.stores.map((store, index) => {
+      if (store.zona === value) {
+        actualArray: store
+      }
+    });
+    console.log(actualArray)
+  }
+  noViewInfo = e => {
+    this.setState({
+      view: false
+    });
+    e.preventDefault();
+  };
+  viewList = e => {
+    this.setState({
+      list: true
+    });
+  };
+  noViewList = e => {
+    this.setState({
+      list: false
     });
   };
   render() {
     const viewInfo = this.state.view;
+    const viewList = this.state.list;
+    const listItems = this.state.stores;
+
     const mapStyles = {
       width: "100%",
       height: "100%"
     };
 
     return (
-      <div class="infoMapsHome">
-        {viewInfo == true &&
-        <div class="infoMapSelectHome ">
-          <h3>{this.state.nombre}</h3>
-          <div class="ratingInfoMapSelectHome">
-            <p>4.6 (747)</p>
-            <p>{this.state.rubro}</p>
-          </div>
-          <div class="imgInfoMapSelectHome">
-            <img
-              src={require("../../assets/images/comercios/comercio-1.jpg")}
-            ></img>
-          </div>
-          <div class="dataInfoMapSelectHome">
-            <ul>
-              <li>
-                <div class="icoInfoMap">
-                  <p>
-                    <span class="icon-icono5"></span>
-                  </p>
-                </div>
-                <p>{this.state.dir}</p>
-              </li>
-              <li>
-                <div class="icoInfoMap">
-                  <p>
-                    <span class="icon-icono6"></span>
-                  </p>
-                </div>
-                <p>{this.state.tel}</p>
-              </li>
-              <li>
-                <div class="icoInfoMap">
-                  <p>
-                    <span class="icon-icono7"></span>
-                  </p>
-                </div>
-                <p>{this.state.hor}</p>
-              </li>
-              <li>
-                <p>{this.state.desc}</p>
-              </li>
-            </ul>
-          </div>
+      <div>
+        <div class="filterMaps">
+          <ul>
+            <li>
+              <label>
+                <input type="radio" name="typeMap" onClick={this.noViewList} />
+                MAPA
+              </label>
+              <label>
+                <input type="radio" name="typeMap" onClick={this.viewList} />
+                LISTA
+              </label>
+            </li>
+            <li>
+              <select
+                name="select"
+                onChange={e => this.onChangeFilter(e, "zona")}
+              >
+                <option value="">Zona</option>
+                <option value="Norte">Norte</option>
+                <option value="Sur">Sur</option>
+                <option value="Oriente">Oriente</option>
+                <option value="Occidente">Occidente</option>
+              </select>
+            </li>
+            <li>
+              <select
+                name="select"
+                onChange={e => this.onChangeFilter(e, "rubro")}
+              >
+                <option value="Todos">Todos</option>
+                <option value="Alojamiento">Alojamientos</option>
+                <option value="Bar">Bares</option>
+                <option value="Cafeteria">Cafeterías</option>
+                <option value="Restaurante">Restaurantes</option>
+              </select>
+            </li>
+            <li class="textInput">
+              <input
+                type="text"
+                onChange={e => this.onChangeFilter(e, "name")}
+                placeholder="Buscar por..."
+              ></input>
+            </li>
+          </ul>
         </div>
-        }
-        <div class="mapComerciosHome">
-          <Map
-            google={this.props.google}
-            zoom={13}
-            style={mapStyles}
-            initialCenter={{ lat: 4.6669067, lng: -74.0721145 }}
-          >
-            {this.displayMarkers()}
-          </Map>
-        </div>
+        {viewList == false && (
+          <div class="infoMapsHome">
+            {viewInfo == true && (
+              <div class="infoMapSelectHome ">
+                <div class="closeInfoMap" onClick={this.noViewInfo}>
+                  X
+                </div>
+                <h3>{this.state.nombre}</h3>
+                <div class="ratingInfoMapSelectHome">
+                  <p>
+                    {this.state.rating} ({this.state.cantrating})
+                  </p>
+                  <p>{this.state.rubro}</p>
+                </div>
+                <div class="imgInfoMapSelectHome">
+                  <img
+                    src={require("../../assets/images/comercios/comercio-1.jpg")}
+                  ></img>
+                </div>
+                <div class="dataInfoMapSelectHome">
+                  <ul>
+                    <li>
+                      <div class="icoInfoMap">
+                        <p>
+                          <span class="icon-icono5"></span>
+                        </p>
+                      </div>
+                      <p>{this.state.dir}</p>
+                    </li>
+                    <li>
+                      <div class="icoInfoMap">
+                        <p>
+                          <span class="icon-icono6"></span>
+                        </p>
+                      </div>
+                      <p>{this.state.tel}</p>
+                    </li>
+                    <li>
+                      <div class="icoInfoMap">
+                        <p>
+                          <span class="icon-icono7"></span>
+                        </p>
+                      </div>
+                      <p>{this.state.hor}</p>
+                    </li>
+                    <li>
+                      <p>{this.state.desc}</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            )}
+            <div class="mapComerciosHome">
+              <Map
+                google={this.props.google}
+                zoom={13}
+                style={mapStyles}
+                initialCenter={{ lat: 4.6669067, lng: -74.0721145 }}
+              >
+                {this.state.arrayStores.map((store, index) => {
+                  return (
+                    <Marker
+                      key={index}
+                      id={index}
+                      position={{
+                        lat: store.latitude,
+                        lng: store.longitude
+                      }}
+                      icon={icomarker}
+                      onClick={() =>
+                        this.setState({
+                          nombre: store.nombre,
+                          rubro: store.rubro,
+                          dir: store.dir,
+                          tel: store.tel,
+                          hor: store.hor,
+                          desc: store.desc,
+                          rating: store.rating,
+                          cantrating: store.cantrating,
+                          view: true
+                        })
+                      }
+                    />
+                  );
+                })}
+              </Map>
+            </div>
+          </div>
+        )}
+        {viewList == true && (
+          <tr>
+            <th>Nombre</th>
+            <th>Raiting</th>
+            <th>Califaciones</th>
+            <th>Rubro</th>
+            <th>Dirección</th>
+            <th>Telefono</th>
+            <th>Horario</th>
+            <th>Descripción</th>
+          </tr>
+        )}
+        {viewList == true &&
+          listItems.map(store => (
+            <tr>
+              <td>{store.nombre}</td>
+              <td>{store.rating}</td>
+              <td>{store.cantrating}</td>
+              <td>{store.rubro}</td>
+              <td>{store.dir}</td>
+              <td>{store.tel}</td>
+              <td>{store.hor}</td>
+              <td>{store.desc}</td>
+            </tr>
+          ))}
       </div>
     );
   }

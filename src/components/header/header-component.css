@@ -33,3 +33,69 @@
   display: flex;
   justify-content: center;
 }
+
+
+
+
+@media only screen and (max-width: 1200px) {
+  .App-header{
+    padding: 0;
+  }
+  .App-logo{
+    padding-left: 10px;
+  }
+  .am_header_nav{
+    width: 93%;
+  }
+ 
+}
+
+
+@media only screen and (max-width: 850px) {
+  .App-header .pure-g{
+    flex-wrap: wrap;
+  }
+  .App-header .pure-g .pure-u-4-24, .App-header .pure-g .pure-u-20-24{
+    width: 100%;
+  }
+  .App-logo a{
+    width: 100%;
+    padding: 20px 0;
+  }
+  .App-header{
+    height: auto;
+  }
+  .titleHeaderHome h1{
+    font-size: 55px !important;
+  }
+  .divRightHeaderHome {
+      top: 89px;
+      left: 34px;
+  }
+}
+
+
+@media only screen and (max-width: 480px) {
+  .App-header{
+    height: auto;
+    padding: 0 30px;
+    padding-bottom: 10px;
+  }
+  .App-header > .pure-g{
+    flex-wrap: wrap;
+  }
+  .App-header > .pure-g .pure-u-4-24{
+    width: 100%;
+    margin: 10px 0;
+  }
+  .am_header_nav{
+    flex-wrap: wrap;
+  }
+  .am_header_nav li{
+    width: 100%;
+    padding: 5px 0;
+  }
+  
+
+
+}

@@ -10,7 +10,7 @@ class Footer extends React.Component {
           <img src={require("../../assets/images/footer/footer-ico.png")}></img>
         </div>
         <div class="pure-g">
-          <div class="pure-u-1-4">
+          <div class="pure-u-1 pure-u-md-1-4">
             <div class="infoDivFooter">
               <h3>NOSOTROS</h3>
               <ul>
@@ -23,12 +23,12 @@ class Footer extends React.Component {
               </ul>
             </div>
           </div>
-          <div class="pure-u-1-4">
+          <div class="pure-u-1 pure-u-md-1-4">
             <div class="infoDivFooter">
               <h3>CONTACTO</h3>
             </div>
           </div>
-          <div class="pure-u-1-4">
+          <div class="pure-u-1 pure-u-md-1-4">
             <div class="infoDivFooter">
               <h3>LEGAL</h3>
               <ul>
@@ -44,7 +44,7 @@ class Footer extends React.Component {
               </ul>
             </div>
           </div>
-          <div class="pure-u-1-4">
+          <div class="pure-u-1 pure-u-md-1-4">
             <div class="infoDivFooter">
               <h3>RECURSOS</h3>
               <ul>
