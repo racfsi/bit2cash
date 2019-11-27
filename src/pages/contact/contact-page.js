@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 /*COMPONENTES*/
 import Header from "../../components/header/header-component";
 import Footer from "../../components/footer/footer-component";
@@ -20,19 +21,22 @@ class Contact extends React.Component {
   };
   // cuando enviamos el formulario
   submitForm = e => {
-    window.Email.send({
-      SecureToken: "a0f5e8e9-ffa6-4b5d-9603-c922452f64d4",
-      To: 'ruizmunozc@gmail.com',
-      From: "you@isp.com",
-      Subject: "This is the subject",
-      Body: "And this is the body" + this.state.nombre
-    }).then(message => alert(message));
-    // this.setState({
-    //   nombre: "",
-    //   apellido: "",
-    //   email: "",
-    //   mensaje: ""
-    // });
+    // window.Email.send({
+    //   SecureToken: "a0f5e8e9-ffa6-4b5d-9603-c922452f64d4",
+    //   To: 'ruizmunozc@gmail.com',
+    //   From: "you@isp.com",
+    //   Subject: "This is the subject",
+    //   Body: "And this is the body" + this.state.nombre
+    // }).then(message => alert(message));
+    this.setState({
+      emailStatus: true
+    });
+    e.preventDefault();
+  };
+  resetForm = e => {
+    this.setState({
+      emailStatus: ''
+    });
     e.preventDefault();
   };
   render() {
@@ -113,7 +117,7 @@ class Contact extends React.Component {
       return (
         <div>
           <Header />
-          <section class="sectionContact sectionBeforeFooter woowContentFull">
+          <section class="sectionContact sectionContactSend sectionBeforeFooter woowContentFull">
             <div class="pure-u-lg-1-1 pure-u-md-1-1 pure-u-sm-1-1 pure-u-1-1">
               <h2>Gracias por tu tiempo</h2>
             </div>
@@ -121,11 +125,25 @@ class Contact extends React.Component {
               <form>
                 <div class="pure-g">
                   <div class="pure-u-1 pure-u-md-1-1">
-                    <p>Hemos recibido tu mensaje.</p>
-                    <p>
+                    <p class="primaryTxt">Hemos recibido tu mensaje,</p>
+                    <p class="secondTxt">
                       Nos pondremos en contacto contigo<br></br>lo mas pronto
                       posible
                     </p>
+                    <div class="btnNewMsg">
+                      <Link
+                        to="/contacto"
+                        className="link"
+                        onClick={this.resetForm}
+                      >
+                        ESCRIBIR NUEVO MENSAJE
+                      </Link>
+                    </div>
+                    <div class="btnNewMsg btnGoToHome">
+                      <Link to="/" className="link">
+                        IR AL INICIO
+                      </Link>
+                    </div>
                   </div>
                 </div>
               </form>

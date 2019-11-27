@@ -145,52 +145,7 @@ class Home extends React.Component {
           </div>
           <div class="pure-g">
             <div class="pure-u-lg-1-1 pure-u-md-1-1 pure-u-sm-1-1 pure-u-1-1">
-              <div class="infoMapsHome">
-                <div class="infoMapSelectHome">
-                  <h3>Canoa Taberna Japonesa</h3>
-                  <div class="ratingInfoMapSelectHome">
-                    <p>4.6 (747)</p>
-                    <p>Restaurante</p>
-                  </div>
-                  <div class="imgInfoMapSelectHome">
-                    <img
-                      src={require("../../assets/images/home/comercio-1.jpg")}
-                    ></img>
-                  </div>
-                  <div class="dataInfoMapSelectHome">
-                    <ul>
-                      <li>
-                        <div class="icoInfoMap">
-                          <p>D</p>
-                        </div>
-                        <p>Cta. 4a # 66 - 78, Bogotá, Cund.</p>
-                      </li>
-                      <li>
-                        <div class="icoInfoMap">
-                          <p>P</p>
-                        </div>
-                        <p>311 237 95 84</p>
-                      </li>
-                      <li>
-                        <div class="icoInfoMap">
-                          <p>H</p>
-                        </div>
-                        <p>Cierra pronto: 12:00a 15:00, 19:00a 22:00</p>
-                      </li>
-                      <li>
-                        <p>
-                          Lorem ipsum dolor sit amet, consectetuer adipiscing
-                          elit, sed diam nonummy nibh euismod tincidunt ut
-                          laoreet dolore{" "}
-                        </p>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="mapComerciosHome">
-                  <Maps />
-                </div>
-              </div>
+              <Maps />
             </div>
           </div>
         </section>

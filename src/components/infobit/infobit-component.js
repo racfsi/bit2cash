@@ -57,7 +57,7 @@ class BitInfo extends React.Component {
             <TabPanel>
               <div class="infoDivDetHeaderHome">
                 <h3>EUR</h3>
-                <p class="infoDivDetPrHeaderHome">8,365.05 USD</p>
+                <p class="infoDivDetPrHeaderHome">8,365.05 EUR</p>
                 <div class="chartsHeaderHome">
                   <div class="chartsImgHeaderHome">
                     <img

@@ -106,3 +106,87 @@ Section Contacto
   padding: 20px 40px;
   -webkit-appearance: none;
 }
+/*
+==============================================
+Section Mail Send
+==============================================
+*/
+.sectionContactSend h2 {
+  margin-bottom: 60px;
+}
+.primaryTxt {
+  color: var(--color-moradoClaro);
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+.secondTxt {
+  color: var(--color-moradoClaro);
+  margin-bottom: 80px;
+}
+.btnNewMsg {
+  margin: 40px;
+}
+.btnNewMsg a {
+  background: rgba(246, 246, 248, 1);
+  background: -moz-linear-gradient(
+    top,
+    rgba(246, 246, 248, 1) 0%,
+    rgba(223, 223, 230, 1) 100%
+  );
+  background: -webkit-gradient(
+    left top,
+    left bottom,
+    color-stop(0%, rgba(246, 246, 248, 1)),
+    color-stop(100%, rgba(223, 223, 230, 1))
+  );
+  background: -webkit-linear-gradient(
+    top,
+    rgba(246, 246, 248, 1) 0%,
+    rgba(223, 223, 230, 1) 100%
+  );
+  background: -o-linear-gradient(
+    top,
+    rgba(246, 246, 248, 1) 0%,
+    rgba(223, 223, 230, 1) 100%
+  );
+  background: -ms-linear-gradient(
+    top,
+    rgba(246, 246, 248, 1) 0%,
+    rgba(223, 223, 230, 1) 100%
+  );
+  background: linear-gradient(
+    to bottom,
+    rgba(246, 246, 248, 1) 0%,
+    rgba(223, 223, 230, 1) 100%
+  );
+  border-radius: 20px;
+  color: var(--color-moradoSuave);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6f6f8', endColorstr='#dfdfe6', GradientType=0 );
+  font-family: "Gotham Bold";
+  padding: 20px 40px;
+}
+.btnGoToHome{
+  margin-top: 60px;
+}
+.btnGoToHome a {
+  background: var(--color-morado);
+  background: rgba(28, 22, 87, 1);
+  background: -webkit-gradient(
+    left top,
+    left bottom,
+    color-stop(0%, rgba(28, 22, 87, 1)),
+    color-stop(100%, rgba(74, 43, 148, 1))
+  );
+  background: linear-gradient(
+    to bottom,
+    rgba(28, 22, 87, 1) 0%,
+    rgba(74, 43, 148, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c1657', endColorstr='#4a2b94', GradientType=0 );
+  border: none;
+  border-radius: 20px;
+  color: #fff;
+  font-family: "Gotham Bold";
+  padding: 20px 40px;
+  -webkit-appearance: none;
+}

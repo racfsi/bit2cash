@@ -1,13 +1,13 @@
 import React from "react";
+import { Link } from "react-router-dom";
+/*STYLES*/
 import "./footer-component.css";
 class Footer extends React.Component {
   render() {
     return (
       <footer>
         <div class="icoFooter">
-          <img
-            src={require("../../assets/images/footer/footer-ico.png")}
-          ></img>
+          <img src={require("../../assets/images/footer/footer-ico.png")}></img>
         </div>
         <div class="pure-g">
           <div class="pure-u-1-4">
@@ -33,7 +33,10 @@ class Footer extends React.Component {
               <h3>LEGAL</h3>
               <ul>
                 <li>
-                  <p>TÉRMINOS Y CONDICIONES</p>
+                  <Link to="/terminos-y-condiciones" className="link">
+                    TÉRMINOS Y CONDICIONES
+                  </Link>
+                  <p></p>
                 </li>
                 <li>
                   <p>POLÍTICA DE PRIVACIDAD</p>

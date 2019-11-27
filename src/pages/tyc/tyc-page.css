@@ -1,0 +1,14 @@
+.sectionTyc {
+  background: "#fff";
+  height: 75vh;
+}
+.sectionTyc h2 {
+  color: var(--color-morado);
+}
+.txtSectionTyc {
+  color: var(--color-moradoClaro);
+  margin: 0 auto;
+  margin-top: 100px;
+  text-align: justify;
+  width: 60%;
+}
