@@ -1,0 +1,262 @@
+/*
+ ==============================================
+ Responsive Style (max-width : 1630px)
+ ==============================================
+ */
+
+@media only screen and (max-width: 1280px) {
+  .divLeftHeaderHome {
+    top: 0px !important;
+  }
+  .titleHeaderHome {
+    width: 90%;
+  }
+  .titleHeaderHome h1 {
+    font-size: 60px !important;
+  }
+  .stepsUseLeft img,
+  .stepsUseRight img,
+  .stepsUseOne img {
+    width: 90% !important;
+  }
+  .stepsUseMore ul li {
+    width: 100px;
+  }
+  .stepsUseMore ul li img {
+    height: auto !important;
+    width: 100% !important;
+  }
+}
+
+/*
+==============================================
+Responsive Style (max-width : 1024px)
+==============================================
+*/
+@media only screen and (max-width: 1024px) {
+  .titleHeaderHome h1 {
+    font-size: 54px !important;
+  }
+  .txtHeaderHome::before {
+    top: 10px;
+  }
+  .stepsUseLeft img,
+  .stepsUseRight img {
+    width: 80% !important;
+  }
+  .stepsUseMore ul li {
+    width: 100px;
+  }
+  .stepsUseMore ul li img {
+    height: auto !important;
+    width: 100% !important;
+  }
+  .filterMaps ul li {
+    margin: 0px 10px;
+  }
+  .filterMaps ul li:first-child {
+    margin-left: 0px;
+  }
+  .filterMaps ul li:last-child {
+    margin-left: 0px;
+  }
+}
+/*
+==============================================
+Responsive Style (max-width : 940px)
+==============================================
+*/
+@media only screen and (max-width: 940px) {
+}
+/*
+==============================================
+Responsive Style (max-width : 768px)
+==============================================
+*/
+@media only screen and (max-width: 768px) {
+  .am_header_nav {
+    left: -110%;
+    position: absolute;
+  }
+  .am_header_nav li {
+    font-size: 28px;
+    justify-content: flex-end;
+    margin-bottom: 40px;
+    padding-right: 30px;
+  }
+  .am_header_nav li:last-child {
+    margin-bottom: 0px;
+  }
+  .menuMobil {
+    display: flex;
+  }
+  .App-logo img {
+    height: 40px;
+  }
+  .menuMobilView {
+    background: rgba(66, 39, 135, 1);
+    background: -moz-linear-gradient(
+      left,
+      rgba(66, 39, 135, 1) 0%,
+      rgba(29, 22, 87, 1) 100%
+    );
+    background: -webkit-gradient(
+      left top,
+      right top,
+      color-stop(0%, rgba(66, 39, 135, 1)),
+      color-stop(100%, rgba(29, 22, 87, 1))
+    );
+    background: -webkit-linear-gradient(
+      left,
+      rgba(66, 39, 135, 1) 0%,
+      rgba(29, 22, 87, 1) 100%
+    );
+    background: -o-linear-gradient(
+      left,
+      rgba(66, 39, 135, 1) 0%,
+      rgba(29, 22, 87, 1) 100%
+    );
+    background: -ms-linear-gradient(
+      left,
+      rgba(66, 39, 135, 1) 0%,
+      rgba(29, 22, 87, 1) 100%
+    );
+    background: linear-gradient(
+      to right,
+      rgba(66, 39, 135, 1) 0%,
+      rgba(29, 22, 87, 1) 100%
+    );
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#422787', endColorstr='#1d1657', GradientType=1 );
+    height: 100%;
+    left: 0px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    z-index: 99;
+  }
+  .menuMobilView .closeMenuMobil {
+    color: #ffffff;
+    display: block;
+    font-size: 40px;
+    top: 32px;
+    position: absolute;
+    right: 30px;
+    z-index: 100;
+  }
+  .menuMobilView .loginMenu {
+    display: block;
+  }
+  .menuMobilView .loginMenu .menuLogin {
+    display: block;
+    left: 50%;
+    top: 90%;
+    transform: translateX(-50%);
+    width: 95%;
+  }
+  .menuMobilView .loginMenu .menuLogin ul li {
+    margin: 0px;
+  }
+  .menuMobilView .loginMenu .menuLogin ul li:first-child {
+    padding-right: 30px;
+  }
+  /*
+  HOME
+  */
+  .menuLogin {
+    display: none;
+  }
+  .divLeftHeaderHome {
+    top: 30px;
+  }
+  .titleHeaderHome {
+    width: 90% !important;
+  }
+  .titleHeaderHome h1,
+  .txtHeaderHome {
+    text-align: left !important;
+    width: 100%;
+  }
+  .txtHeaderHome::before {
+    top: 5px !important;
+  }
+  .bannerHome .divRightHeaderHome {
+    display: none;
+  }
+  .stepsUse {
+    flex-direction: column;
+  }
+  .stepsUseOne {
+    top: 0px;
+  }
+  .stepsUseRight,
+  .stepsUseRight4,
+  .stepsUseOne {
+    top: 50px !important;
+  }
+  .sectionComercios {
+    margin-top: 60px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .txtSectionComercios {
+    font-size: 16px;
+    margin-top: 20px;
+  }
+  .listMapOpt {
+    display: none !important;
+  }
+  .filterMaps {
+    padding-top: 50px;
+    position: relative;
+  }
+  .filterMaps ul .textInput {
+    position: absolute !important;
+    top: -30px;
+    width: 94%;
+  }
+  .textInput input {
+    width: 100% !important;
+  }
+  /**/
+  .App-header {
+    padding: 0px 30px;
+  }
+  .sectionAliados {
+    padding-bottom: 200px;
+  }
+  .divBannerTop {
+    display: none;
+  }
+  .sectionComoUsarlo {
+    padding: 60px 30px !important;
+    padding-bottom: 100px !important;
+  }
+  .stepsUseMore ul li {
+    height: 30px;
+  }
+  .stepsUseMore ul li img {
+    height: 100% !important;
+    width: auto !important;
+  }
+}
+/*
+==============================================
+Responsive Style (max-width : 568px)
+==============================================
+*/
+@media only screen and (max-width: 568px) {
+}
+/*
+==============================================
+Responsive Style (max-width : 480px)
+==============================================
+*/
+@media screen and (max-width: 480px) {
+}
+/*
+==============================================
+Responsive Style (max-width : 380px)
+==============================================
+*/
+@media only screen and (max-width: 380px) {
+}

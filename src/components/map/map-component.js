@@ -12,6 +12,9 @@ export class Maps extends React.Component {
       filterRubro: "",
       filterName: "",
       arrayStores: [],
+      valueZona: "",
+      valueRubro: "",
+      valueInput: "",
       stores: [
         {
           nombre: "Crepes And Wafles",
@@ -105,12 +108,86 @@ export class Maps extends React.Component {
     event.preventDefault();
     const value = event.target.value;
     const actualArray = [];
-    this.state.stores.map((store, index) => {
-      if (store.zona === value) {
-        actualArray: store
+    const valZona = this.state.valueZona;
+    const valRubro = this.state.valueRubro;
+    if (id == "zona") {
+      this.setState({
+        valueZona: value
+      });
+      this.state.stores.map((store, index) => {
+        if (value != "") {
+          if (valRubro != "") {
+            if (store.zona === value && store.rubro === valRubro) {
+              actualArray.push(store);
+            }
+          } else {
+            if (store.zona === value) {
+              actualArray.push(store);
+            }
+          }
+        } else if (value === "") {
+          if (valRubro != "") {
+            if (store.rubro === valRubro) {
+              actualArray.push(store);
+            }
+          } else {
+            actualArray.push(store);
+          }
+        }
+      });
+    }
+    if (id == "rubro") {
+      this.setState({
+        valueRubro: value
+      });
+      this.state.stores.map((store, index) => {
+        if (value != "") {
+          if (valZona != "") {
+            if (store.zona === valZona && store.rubro === value) {
+              actualArray.push(store);
+            }
+          } else {
+            if (store.rubro === value) {
+              actualArray.push(store);
+            }
+          }
+        } else if (value === "") {
+          if (valZona != "") {
+            if (store.zona === valZona) {
+              actualArray.push(store);
+            }
+          } else {
+            actualArray.push(store);
+          }
+        }
+      });
+    }
+    this.setState({
+      arrayStores: actualArray
+    });
+  }
+  onChangeFilterSearch(event) {
+    event.preventDefault();
+    const value = event.target.value;
+    this.setState({
+      valueInput: value
+    });
+  }
+  onChangeFilterSearchBtn = e => {
+    const value = this.state.valueInput;
+    const actualArray = [];
+    this.state.arrayStores.map((store, index) => {
+      if (value != "") {
+        if (store.nombre.indexOf(value) > -1) {
+          actualArray.push(store);
+        }
+      } else {
+        actualArray.push(store);
       }
     });
-    console.log(actualArray)
+    this.setState({
+      arrayStores: actualArray
+    });
   }
   noViewInfo = e => {
     this.setState({
@@ -131,8 +208,7 @@ export class Maps extends React.Component {
   render() {
     const viewInfo = this.state.view;
     const viewList = this.state.list;
-    const listItems = this.state.stores;
-
+    const listItems = this.state.arrayStores;
     const mapStyles = {
       width: "100%",
       height: "100%"
@@ -142,7 +218,7 @@ export class Maps extends React.Component {
       <div>
         <div class="filterMaps">
           <ul>
-            <li>
+            <li class="listMapOpt">
               <label>
                 <input type="radio" name="typeMap" onClick={this.noViewList} />
                 MAPA
@@ -169,7 +245,7 @@ export class Maps extends React.Component {
                 name="select"
                 onChange={e => this.onChangeFilter(e, "rubro")}
               >
-                <option value="Todos">Todos</option>
+                <option value="">Todos</option>
                 <option value="Alojamiento">Alojamientos</option>
                 <option value="Bar">Bares</option>
                 <option value="Cafeteria">Cafeterías</option>
@@ -179,9 +255,14 @@ export class Maps extends React.Component {
             <li class="textInput">
               <input
                 type="text"
-                onChange={e => this.onChangeFilter(e, "name")}
+                onChange={e => this.onChangeFilterSearch(e)}
                 placeholder="Buscar por..."
               ></input>
+              <p onClick={this.onChangeFilterSearchBtn}>
+                <img
+                  src={require("../../assets/images/home/btn-search.svg")}
+                ></img>
+              </p>
             </li>
           </ul>
         </div>

@@ -427,10 +427,34 @@ section {
   padding-left: 20px;
   width: 200px;
 }
+.filterMaps ul .textInput {
+  position: relative;
+}
 .filterMaps ul .textInput input:focus {
   border: none;
   box-shadow: none;
   outline-color: transparent;
+}
+.filterMaps ul .textInput input::placeholder {
+  font-family: "Gotham Book Italic";
+}
+.filterMaps ul li input[type="radio"] {
+  margin-right: 5px;
+}
+.filterMaps ul .textInput p {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  height: 50px;
+  justify-content: center;
+  padding-right: 20px;
+  position: absolute;
+  right: 0px;
+  width: 50px;
+}
+.filterMaps ul .textInput p img {
+  height: 50%;
+  width: auto;
 }
 /*
   ==============================================
@@ -441,6 +465,7 @@ section {
   background: url("../../assets/images/home/quees-background.jpg") center center
     no-repeat;
   background-size: cover;
+  overflow: visible !important;
   position: relative;
 }
 .sectionQueEs h2 {
@@ -449,6 +474,7 @@ section {
 .infoQueEs {
   color: #fff;
   margin: 0 auto;
+  overflow: visible !important;
   padding: 40px 0px;
   width: 60%;
 }
@@ -485,105 +511,116 @@ section {
   padding-bottom: 250px;
 }
 @media only screen and (max-width: 1200px) {
-  
-  .bannerHome{
+  .bannerHome {
     padding: 10px 30px;
     height: auto !important;
   }
-  .txtHeaderHome{
+  .txtHeaderHome {
     width: 100% !important;
     padding-bottom: 70px;
   }
   .sectionComoUsarlo {
     padding: 30px 20px;
   }
-  .stepsUse{
+  .stepsUse {
     justify-content: none;
   }
-  .stepsUseOne img, .stepsUseLeft, .stepsUseRight{
+  .stepsUseOne img,
+  .stepsUseLeft,
+  .stepsUseRight {
     width: 100%;
   }
 }
 
-
-
 @media only screen and (max-width: 480px) {
-  .menuLogin{
+  .menuLogin {
     left: 0;
     width: 100%;
   }
-  .bannerHome, .sectionComoUsarlo, .sectionComercios, .sectionQueEs, .sectionAliados{
+  .bannerHome,
+  .sectionComoUsarlo,
+  .sectionComercios,
+  .sectionQueEs,
+  .sectionAliados {
     padding: 15px;
     height: auto;
   }
-  .bannerHome .pure-g{
+  .bannerHome .pure-g {
     flex-wrap: wrap;
   }
-  .bannerHome .pure-g .pure-u-15-24, .bannerHome .pure-g .pure-u-1-3 {
+  .bannerHome .pure-g .pure-u-15-24,
+  .bannerHome .pure-g .pure-u-1-3 {
     width: 100%;
   }
-  .titleHeaderHome h1, .sectionQueEs h2, .sectionAliados h2{
+  .titleHeaderHome h1,
+  .sectionQueEs h2,
+  .sectionAliados h2 {
     font-size: 35px !important;
     text-align: center;
     margin-top: 20px;
   }
-  .titleHeaderHome, .txtHeaderHome{
+  .titleHeaderHome,
+  .txtHeaderHome {
     width: 100%;
   }
-  .txtHeaderHome::before{
-    display: none;
-  }
-  .txtHeaderHome p{
+
+  .txtHeaderHome p {
     font-size: 25px;
     margin-bottom: 100px;
   }
-  .divRightHeaderHome, .stepsUseLeft3, .stepsUseRight{
+  .divRightHeaderHome,
+  .stepsUseLeft3,
+  .stepsUseRight {
     position: initial;
     width: 100%;
   }
-  .sectionComoUsarlo h2, .sectionComercios h2{
+  .sectionComoUsarlo h2,
+  .sectionComercios h2 {
     font-size: 30px !important;
   }
-  .stepsUseLeft, .stepsUseRight, .infoQueEs{
+  .stepsUseLeft,
+  .stepsUseRight,
+  .infoQueEs {
     width: 100%;
-
   }
-  .stepsUse{
+  .stepsUse {
     display: block !important;
     margin: 0;
   }
-  .stepsUseLeft img, .stepsUseRight img{
+  .stepsUseLeft img,
+  .stepsUseRight img {
     width: 100%;
   }
-  .stepsUseMore ul{
+  .stepsUseMore ul {
     flex-wrap: wrap;
     padding: 0;
   }
-  .stepsUseMore ul li{
+  .stepsUseMore ul li {
     width: 100%;
     margin-bottom: 15px;
   }
-  .sectionComoUsarlo{
+  .sectionComoUsarlo {
     min-height: auto;
   }
   .stepsUseRight4 .stepsUseTxt {
     position: inherit;
   }
-  .stepsUseOne{
+  .stepsUseOne {
     margin: 0;
-    top: -25px;
+    top: 25px !important;
   }
-  .stepsUseOne img{
+  .stepsUseOne img {
     width: 100%;
   }
-  .stepsUseOne .stepsUseTxt p{
+  .stepsUseOne .stepsUseTxt p {
     top: 0;
   }
-  .sectionAliados{
+  .sectionAliados {
     margin-bottom: 100px;
     overflow: visible !important;
   }
-  .slick-prev, .slick-next{
+  .slick-prev,
+  .slick-next {
     display: none !important;
   }
 }

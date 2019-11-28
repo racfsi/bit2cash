@@ -16,7 +16,6 @@ Section Login
   margin-bottom: 100px;
 }
 .sectionRegister .formContact {
-  border-top: 5px solid rgba(255, 162, 0, 1);
   border-top-left-radius: 0;
 }
 .sectionRegister .formContact p {
@@ -28,13 +27,33 @@ Section Login
 .sectionRegister .moreLogin a {
   font-size: 16px;
 }
-
+.sectionRegister .tabLogin ul .active {
+  /* background: rgba(255, 162, 0, 1); */
+  background: -webkit-gradient(
+    left top,
+    left bottom,
+    color-stop(0%, rgba(255, 162, 0, 1)),
+    color-stop(100%, rgba(255, 183, 0, 1))
+  );
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 162, 0, 1) 0%,
+    rgba(255, 183, 0, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffa200', endColorstr='#ffb700', GradientType=0 );
+  box-shadow: -6px 0px 5px -3px rgba(98, 96, 101);
+}
+@media only screen and (max-width: 768px) {
+  .sectionRegister .formContact {
+  }
+}
 @media only screen and (max-width: 480px) {
-  .sectionRegister{
+  .sectionRegister {
     padding: 15px;
     padding-bottom: 143px;
+    margin-bottom: 100px;
   }
-  .sectionRegister h2{
+  .sectionRegister h2 {
     font-size: 45px;
   }
 }

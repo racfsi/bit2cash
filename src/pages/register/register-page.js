@@ -34,16 +34,17 @@ class Register extends React.Component {
           <div class="formContact">
             <div class="tabLogin">
               <ul>
-                <li class="active">
+                <li class="noactive">
                   <Link to="/login" className="link">
                     INGRESO
                   </Link>
                 </li>
-                <li class="noactive">
+                <li class="active">
                   <a href="#">REGISTRO</a>
                 </li>
               </ul>
             </div>
+            <div class="borderTopForm"></div>
             <form onSubmit={this.procesar}>
               <div class="pure-g">
                 <div class="pure-u-1 pure-u-md-1-1">
