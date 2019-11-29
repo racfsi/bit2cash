@@ -10,7 +10,23 @@ import "../../assets/css/grids-responsive-min.css";
 import "../../assets/css/fonts.css";
 import "../../assets/css/style-responsive.css";
 class Header extends React.Component {
+  state = {
+    classmenu: 0
+  };
+  addClass = e => {
+    this.setState({
+      classmenu: 1
+    });
+    e.preventDefault();
+  };
+  removeClass = e => {
+    this.setState({
+      classmenu: 0
+    });
+    e.preventDefault();
+  };
   render() {
+    const clases = this.state.classmenu;
     return (
       <header className="App-header">
         <div class="pure-g">
@@ -22,8 +38,13 @@ class Header extends React.Component {
             </div>
           </div>
           <div class="pure-u-2-3 pure-u-md-20-24">
-            <ul class="am_header_nav ">
-              <span class="closeMenuMobil">X</span>
+            <ul
+              class=" "
+              className={`am_header_nav ${clases === 1 ? "menuMobilView" : ""}`}
+            >
+              <span class="closeMenuMobil" onClick={this.removeClass}>
+                X
+              </span>
               <li>
                 <a>¿Cómo usarlo?</a>
               </li>
@@ -55,7 +76,7 @@ class Header extends React.Component {
                 </div>
               </div>
             </ul>
-            <ul class="menuMobil">
+            <ul class="menuMobil" onClick={this.addClass}>
               <li></li>
               <li></li>
               <li></li>

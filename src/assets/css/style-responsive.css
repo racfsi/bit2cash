@@ -3,16 +3,25 @@
  Responsive Style (max-width : 1630px)
  ==============================================
  */
-
-@media only screen and (max-width: 1280px) {
+@media only screen and (max-width: 1400px) {
+  .bannerHome{
+    height: 100vh !important;
+    padding-top: 20px !important;
+  }
   .divLeftHeaderHome {
-    top: 0px !important;
+    /* top: 40px !important; */
   }
   .titleHeaderHome {
     width: 90%;
   }
   .titleHeaderHome h1 {
-    font-size: 60px !important;
+    font-size: 2.8em !important;
+  }
+  .txtHeaderHome::before{
+    top: 5px !important;
+  }
+  .txtHeaderHome p{
+    font-size: 1.8em !important;
   }
   .stepsUseLeft img,
   .stepsUseRight img,
@@ -26,8 +35,10 @@
     height: auto !important;
     width: 100% !important;
   }
+  .divRightHeaderHome{
+    top: 100px !important;
+  }
 }
-
 /*
 ==============================================
 Responsive Style (max-width : 1024px)
@@ -35,10 +46,13 @@ Responsive Style (max-width : 1024px)
 */
 @media only screen and (max-width: 1024px) {
   .titleHeaderHome h1 {
-    font-size: 54px !important;
+    font-size: 2.5em !important;
   }
   .txtHeaderHome::before {
     top: 10px;
+  }
+  .txtHeaderHome p{
+    font-size: 1.8em !important;
   }
   .stepsUseLeft img,
   .stepsUseRight img {
@@ -79,7 +93,7 @@ Responsive Style (max-width : 768px)
     position: absolute;
   }
   .am_header_nav li {
-    font-size: 28px;
+    font-size: 1.3em;
     justify-content: flex-end;
     margin-bottom: 40px;
     padding-right: 30px;
@@ -131,13 +145,14 @@ Responsive Style (max-width : 768px)
     left: 0px;
     margin: 0;
     padding: 0;
+    position: fixed;
     width: 100%;
     z-index: 99;
   }
   .menuMobilView .closeMenuMobil {
     color: #ffffff;
     display: block;
-    font-size: 40px;
+    font-size: 2em;
     top: 32px;
     position: absolute;
     right: 30px;
@@ -157,7 +172,17 @@ Responsive Style (max-width : 768px)
     margin: 0px;
   }
   .menuMobilView .loginMenu .menuLogin ul li:first-child {
-    padding-right: 30px;
+    border: none;
+    position: relative;
+  }
+  .menuMobilView .loginMenu .menuLogin ul li:first-child::after{
+    background: var(--color-moradoEnlace);
+    content: '';
+    height: 100%;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 2px;
   }
   /*
   HOME
@@ -166,7 +191,7 @@ Responsive Style (max-width : 768px)
     display: none;
   }
   .divLeftHeaderHome {
-    top: 30px;
+    top: 50% !important;
   }
   .titleHeaderHome {
     width: 90% !important;
@@ -238,6 +263,10 @@ Responsive Style (max-width : 768px)
     height: 100% !important;
     width: auto !important;
   }
+  .storeApps li {
+    height: 40px !important;
+  }
+  
 }
 /*
 ==============================================
@@ -245,6 +274,9 @@ Responsive Style (max-width : 568px)
 ==============================================
 */
 @media only screen and (max-width: 568px) {
+  .divLeftHeaderHome {
+    top: 0% !important;
+  }
 }
 /*
 ==============================================

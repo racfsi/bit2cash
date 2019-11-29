@@ -66,7 +66,7 @@ class Home extends React.Component {
                 <p>en tu smartphone (es gratis).</p>
               </div>
               <div class="stepsUseMore">
-                <ul>
+                <ul class="storeApps">
                   <li>
                     <img
                       src={require("../../assets/images/home/google-play.jpg")}

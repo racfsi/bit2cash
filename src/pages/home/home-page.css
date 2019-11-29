@@ -83,7 +83,8 @@ section {
   */
 .divLeftHeaderHome {
   position: relative;
-  top: 50px;
+  /* top: 50px; */
+  top: 10%
 }
 .bannerHome {
   background: url("../../assets/images/home/banner-background.jpg") center
@@ -97,7 +98,7 @@ section {
 }
 .titleHeaderHome h1 {
   color: var(--color-morado);
-
+  font-size: 3em;
   text-align: left;
 }
 .txtHeaderHome {
@@ -108,7 +109,7 @@ section {
   width: 80%;
 }
 .txtHeaderHome p {
-  font-size: 40px;
+  font-size: 2em;
 }
 .txtHeaderHome::before {
   background: var(--color-morado);
@@ -116,13 +117,13 @@ section {
   height: 5px;
   left: 0;
   position: absolute;
-  top: -10px;
+  top: 5px;
   width: 60%;
 }
 .divRightHeaderHome {
   float: right;
   position: relative;
-  top: 160px;
+  top: 20%;
   width: 350px;
 }
 .infoDivHeaderHome {
@@ -513,7 +514,6 @@ section {
 @media only screen and (max-width: 1200px) {
   .bannerHome {
     padding: 10px 30px;
-    height: auto !important;
   }
   .txtHeaderHome {
     width: 100% !important;
