@@ -14,6 +14,29 @@ class Home extends React.Component {
       <div>
         <Header />
         <section class="bannerHome woowContentFull ">
+          <div class="wrapperIcos">
+            <div class="icoLeft">
+              <img
+                src={require("../../assets/images/home/banner-background-l.png")}
+              ></img>
+            </div>
+            <div class="icoRightTop">
+              <img
+                src={require("../../assets/images/home/banner-background-rt.png")}
+              ></img>
+            </div>
+            <div class="icoRightMiddle">
+              <img
+                src={require("../../assets/images/home/banner-background-rm.png")}
+              ></img>
+            </div>
+            <div class="icoRightBottom">
+              <img
+                src={require("../../assets/images/home/banner-background-rb.png")}
+              ></img>
+            </div>
+          </div>
+
           <div class="menuLogin">
             <ul>
               <li>
@@ -50,7 +73,7 @@ class Home extends React.Component {
             </div>
           </div>
         </section>
-        <section class="sectionComoUsarlo woowContentFull" id="sectionComoUso">
+        <section class="sectionComoUsarlo woowContentFull" id="como-usarlo">
           <div class="pure-g">
             <div class="pure-u-1-1">
               <h2>¿Cómo usarlo?</h2>
@@ -130,7 +153,7 @@ class Home extends React.Component {
             </div>
           </div>
         </section>
-        <section class="sectionComercios woowContentFull" id="sectionComercios">
+        <section class="sectionComercios woowContentFull" id="comercios">
           <div class="pure-g">
             <div class="pure-u-lg-1-1 pure-u-md-1-1 pure-u-sm-1-1 pure-u-1-1">
               <h2>Comercios</h2>
@@ -149,7 +172,7 @@ class Home extends React.Component {
             </div>
           </div>
         </section>
-        <section class="sectionQueEs woowContentFull" id="sectionQueEs">
+        <section class="sectionQueEs woowContentFull" id="que-es-bitcoin">
           <div class="pure-u-lg-1-1 pure-u-md-1-1 pure-u-sm-1-1 pure-u-1-1">
             <h2>¿Qué es Bitcoin?</h2>
           </div>
@@ -167,7 +190,7 @@ class Home extends React.Component {
         </section>
         <section
           class="sectionAliados sectionBeforeFooter woowContentFull"
-          id="sectionAliados"
+          id="nuestros-aliados"
         >
           <div class="pure-u-lg-1-1 pure-u-md-1-1 pure-u-sm-1-1 pure-u-1-1">
             <h2>Nuestros aliados</h2>

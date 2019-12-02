@@ -84,21 +84,101 @@ section {
 .divLeftHeaderHome {
   position: relative;
   /* top: 50px; */
-  top: 10%
+  top: 10%;
 }
 .bannerHome {
-  background: url("../../assets/images/home/banner-background.jpg") center
-    center no-repeat;
+  background: #fff;
   background-size: cover;
   height: 90vh;
   position: relative;
 }
+.wrapperIcos {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.icoLeft {
+  left: -100px;
+  position: absolute;
+  top: -180px;
+  -webkit-animation: icoLeft 15s ease infinite;
+  animation: icoLeft 15s ease infinite;
+}
+@keyframes icoLeft {
+  0% {
+    left: -100px;
+  }
+  25% {
+    left: 100px;
+  }
+  50% {
+    left: -100px;
+  }
+  75% {
+    left: 100px;
+  }
+  100% {
+    left: -100px;
+  }
+}
+.icoRightTop {
+  position: absolute;
+  right: 45%;
+  top: -100px;
+  -webkit-animation: icoRightTop 15s ease infinite;
+  animation: icoRightTop 15s ease infinite;
+}
+.icoRightTop img {
+  height: 300px;
+}
+@keyframes icoRightTop {
+  0% {
+    top: -100px;
+  }
+  25% {
+    top: 100px;
+  }
+  50% {
+    top: -100px;
+  }
+  75% {
+    top: 100px;
+  }
+  100% {
+    top: -100px;
+  }
+}
+.icoRightMiddle {
+  position: absolute;
+  right: 20%;
+  top: 0;
+}
+.icoRightBottom {
+  position: absolute;
+  right: 0;
+  top: 60%;
+}
+
+@keyframes icoRightTop {
+  0% {
+    top: -100px;
+  }
+  50% {
+    top: 50px;
+  }
+  100% {
+    top: 100px;
+  }
+}
+
 .titleHeaderHome {
   width: 80%;
 }
 .titleHeaderHome h1 {
   color: var(--color-morado);
-  font-size: 3em;
+  font-size: 4em;
   text-align: left;
 }
 .txtHeaderHome {
@@ -332,6 +412,7 @@ section {
   -webkit-box-shadow: 0px 0px 5px 1px rgba(207, 205, 207, 1);
   -moz-box-shadow: 0px 0px 5px 1px rgba(207, 205, 207, 1);
   box-shadow: 0px 0px 5px 1px rgba(207, 205, 207, 1);
+  position: relative;
 }
 .infoMapSelectHome {
   height: 100%;
@@ -348,7 +429,15 @@ section {
   font-size: 18px;
 }
 .imgInfoMapSelectHome {
+  align-items: center;
+  display: flex;
+  justify-content: center;
   margin: 20px 0px;
+  overflow: hidden;
+}
+.imgInfoMapSelectHome img {
+  height: auto;
+  width: 100%;
 }
 .dataInfoMapSelectHome ul {
   list-style: none;
@@ -616,7 +705,7 @@ section {
     top: 0;
   }
   .sectionAliados {
-    margin-bottom: 100px;
+    padding-bottom: 200px;
     overflow: visible !important;
   }
   .slick-prev,

@@ -33,6 +33,9 @@
   display: flex;
   justify-content: center;
 }
+.am_header_nav li a{
+  cursor: pointer;
+}
 .menuMobil {
   align-content: center;
   display: none;

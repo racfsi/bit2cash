@@ -4,7 +4,7 @@
  ==============================================
  */
 @media only screen and (max-width: 1400px) {
-  .bannerHome{
+  .bannerHome {
     height: 100vh !important;
     padding-top: 20px !important;
   }
@@ -17,10 +17,10 @@
   .titleHeaderHome h1 {
     font-size: 2.8em !important;
   }
-  .txtHeaderHome::before{
+  .txtHeaderHome::before {
     top: 5px !important;
   }
-  .txtHeaderHome p{
+  .txtHeaderHome p {
     font-size: 1.8em !important;
   }
   .stepsUseLeft img,
@@ -35,7 +35,7 @@
     height: auto !important;
     width: 100% !important;
   }
-  .divRightHeaderHome{
+  .divRightHeaderHome {
     top: 100px !important;
   }
 }
@@ -51,7 +51,7 @@ Responsive Style (max-width : 1024px)
   .txtHeaderHome::before {
     top: 10px;
   }
-  .txtHeaderHome p{
+  .txtHeaderHome p {
     font-size: 1.8em !important;
   }
   .stepsUseLeft img,
@@ -175,9 +175,9 @@ Responsive Style (max-width : 768px)
     border: none;
     position: relative;
   }
-  .menuMobilView .loginMenu .menuLogin ul li:first-child::after{
+  .menuMobilView .loginMenu .menuLogin ul li:first-child::after {
     background: var(--color-moradoEnlace);
-    content: '';
+    content: "";
     height: 100%;
     position: absolute;
     right: 0px;
@@ -266,7 +266,18 @@ Responsive Style (max-width : 768px)
   .storeApps li {
     height: 40px !important;
   }
-  
+  .infoMapSelectHome {
+    background: #fff;
+    padding: 40px;
+    position: absolute !important;
+    top: 0;
+    width: 90% !important;
+    z-index: 11;
+  }
+  .closeInfoMap {
+    right: 1em !important;
+    top: 1em !important;
+  }
 }
 /*
 ==============================================

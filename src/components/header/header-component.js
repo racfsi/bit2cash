@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 /*SLIDER*/
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Scrollchor from "react-scrollchor";
 /*STYLES*/
 import "./header-component.css";
 import "../../assets/css/pure-min.css";
@@ -32,7 +33,7 @@ class Header extends React.Component {
         <div class="pure-g">
           <div class="pure-u-1-3 pure-u-md-4-24">
             <div className="App-logo">
-              <Link to="/" className="link">
+              <Link to="/" spy={false} smooth={false}>
                 <img src={require("../../assets/images/logo.png")}></img>
               </Link>
             </div>
@@ -46,29 +47,51 @@ class Header extends React.Component {
                 X
               </span>
               <li>
-                <a>¿Cómo usarlo?</a>
+                <Scrollchor
+                  to="#como-usarlo"
+                  animate={{ offset: -70, duration: 500 }}
+                  spy={true}
+                  className="nav-link"
+                  onClick={this.removeClass}
+                >
+                  ¿Cómo usarlo?
+                </Scrollchor>
               </li>
               <li>
-                <a>Comercios</a>
+                <Scrollchor
+                  to="#comercios"
+                  animate={{ offset: -70, duration: 500 }}
+                  spy={true}
+                  className="nav-link"
+                  onClick={this.removeClass}
+                >
+                  Comercios
+                </Scrollchor>
               </li>
               <li>
-                <a>¿Qué es bitcoin?</a>
+                <Scrollchor
+                  to="#que-es-bitcoin"
+                  animate={{ offset: -70, duration: 500 }}
+                  spy={true}
+                  className="nav-link"
+                  onClick={this.removeClass}
+                >
+                  ¿Qué es bitcoin?
+                </Scrollchor>
               </li>
               <li>
-                <Link to="/contacto" className="link">
-                  CONTÁCTANOS
-                </Link>
+                <Link to="/contacto">CONTÁCTANOS</Link>
               </li>
               <div class="loginMenu">
                 <div class="menuLogin">
                   <ul>
                     <li>
-                      <Link to="/login" className="link">
+                      <Link to="/login" spy={false} smooth={false}>
                         INGRESO
                       </Link>
                     </li>
                     <li>
-                      <Link to="/register" className="link">
+                      <Link to="/register" spy={false} smooth={false}>
                         REGISTRO
                       </Link>
                     </li>
