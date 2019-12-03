@@ -23,9 +23,6 @@ class BitInfo extends React.Component {
                 <p class="infoDivDetPrHeaderHome">10,890.05 COP</p>
                 <div class="chartsHeaderHome">
                   <div class="chartsImgHeaderHome">
-                    {/* <img
-                      src={require("../../assets/images/home/chart-graphics.png")}
-                    ></img> */}
                     <Chart
                       width={"100%"}
                       height={"100%"}
@@ -77,9 +74,41 @@ class BitInfo extends React.Component {
                 <p class="infoDivDetPrHeaderHome">9,437.05 USD</p>
                 <div class="chartsHeaderHome">
                   <div class="chartsImgHeaderHome">
-                    <img
-                      src={require("../../assets/images/home/chart-graphics.png")}
-                    ></img>
+                    <Chart
+                      width={"100%"}
+                      height={"100%"}
+                      chartType="LineChart"
+                      loader={<div>Cargando...</div>}
+                      data={[
+                        ["x", "dogs"],
+                        [0, 0],
+                        [1, 13],
+                        [2, 23],
+                        [3, 33],
+                        [4, 43],
+                        [5, 53],
+                        [6, 63],
+                        [7, 73],
+                        [8, 83],
+                        [9, 93],
+                        [10, 53],
+                        [11, 13]
+                      ]}
+                      options={{
+                        hAxis: {
+                          title: ""
+                        },
+                        vAxis: {
+                          title: ""
+                        },
+                        animation: {
+                          duration: 1000,
+                          easing: "out",
+                          startup: true
+                        }
+                      }}
+                      rootProps={{ "data-testid": "1" }}
+                    />
                   </div>
                   <p>-1.01%</p>
                 </div>
@@ -96,9 +125,41 @@ class BitInfo extends React.Component {
                 <p class="infoDivDetPrHeaderHome">8,365.05 EUR</p>
                 <div class="chartsHeaderHome">
                   <div class="chartsImgHeaderHome">
-                    <img
-                      src={require("../../assets/images/home/chart-graphics.png")}
-                    ></img>
+                    <Chart
+                      width={"100%"}
+                      height={"100%"}
+                      chartType="LineChart"
+                      loader={<div>Cargando...</div>}
+                      data={[
+                        ["x", "dogs"],
+                        [0, 0],
+                        [1, 33],
+                        [2, 53],
+                        [3, 63],
+                        [4, 23],
+                        [5, 93],
+                        [6, 33],
+                        [7, 33],
+                        [8, 23],
+                        [9, 13],
+                        [10, 83],
+                        [11, 73]
+                      ]}
+                      options={{
+                        hAxis: {
+                          title: ""
+                        },
+                        vAxis: {
+                          title: ""
+                        },
+                        animation: {
+                          duration: 1000,
+                          easing: "out",
+                          startup: true
+                        }
+                      }}
+                      rootProps={{ "data-testid": "1" }}
+                    />
                   </div>
                   <p>-1.01%</p>
                 </div>
