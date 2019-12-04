@@ -28,7 +28,7 @@ export class Maps extends React.Component {
           cantrating: 700,
           zona: "Norte",
           desc:
-            "Lorem Ipsum Dolor Sit Amet, Consectetuer Adipiscing Elit, Sed Diam Nonummy Nibh Euismod Tincidunt Ut Laoreet Dolore"
+            "Lorem Ipsum Dolor Sit Amet, Consectetuer Adipiscing Elit"
         },
         {
           nombre: "Tostao",
@@ -42,7 +42,7 @@ export class Maps extends React.Component {
           cantrating: 540,
           zona: "Sur",
           desc:
-            "Lorem Ipsum Dolor Sit Amet, Consectetuer Adipiscing Elit, Sed Diam Nonummy Nibh Euismod Tincidunt Ut Laoreet Dolore"
+            "Lorem Ipsum Dolor Sit Amet, Consectetuer Adipiscing Elit"
         },
         {
           nombre: "Tennis",
@@ -56,7 +56,7 @@ export class Maps extends React.Component {
           cantrating: 10,
           zona: "Oriente",
           desc:
-            "Lorem Ipsum Dolor Sit Amet, Consectetuer Adipiscing Elit, Sed Diam Nonummy Nibh Euismod Tincidunt Ut Laoreet Dolore"
+            "Lorem Ipsum Dolor Sit Amet, Consectetuer Adipiscing Elit"
         },
         {
           nombre: "Adidas",
@@ -70,7 +70,7 @@ export class Maps extends React.Component {
           cantrating: 2,
           zona: "Occidente",
           desc:
-            "Lorem Ipsum Dolor Sit Amet, Consectetuer Adipiscing Elit, Sed Diam Nonummy Nibh Euismod Tincidunt Ut Laoreet Dolore"
+            "Lorem Ipsum Dolor Sit Amet, Consectetuer Adipiscing Elit"
         },
         {
           nombre: "Juan Valdez Café",
@@ -84,7 +84,7 @@ export class Maps extends React.Component {
           cantrating: 1,
           zona: "Norte",
           desc:
-            "Lorem Ipsum Dolor Sit Amet, Consectetuer Adipiscing Elit, Sed Diam Nonummy Nibh Euismod Tincidunt Ut Laoreet Dolore"
+            "Lorem Ipsum Dolor Sit Amet, Consectetuer Adipiscing Elit"
         },
         {
           nombre: "El Corral",
@@ -98,7 +98,7 @@ export class Maps extends React.Component {
           cantrating: 20,
           zona: "Sur",
           desc:
-            "Lorem Ipsum Dolor Sit Amet, Consectetuer Adipiscing Elit, Sed Diam Nonummy Nibh Euismod Tincidunt Ut Laoreet Dolore"
+            "Lorem Ipsum Dolor Sit Amet, Consectetuer Adipiscing Elit"
         }
       ]
     };
@@ -245,7 +245,7 @@ export class Maps extends React.Component {
                 name="select"
                 onChange={e => this.onChangeFilter(e, "rubro")}
               >
-                <option value="">Todos</option>
+                <option value="">RUBRO</option>
                 <option value="Alojamiento">Alojamientos</option>
                 <option value="Bar">Bares</option>
                 <option value="Cafeteria">Cafeterías</option>
@@ -356,30 +356,31 @@ export class Maps extends React.Component {
           </div>
         )}
         {viewList == true && (
-          <tr>
-            <th>Nombre</th>
-            <th>Raiting</th>
-            <th>Califaciones</th>
-            <th>Rubro</th>
-            <th>Dirección</th>
-            <th>Telefono</th>
-            <th>Horario</th>
-            <th>Descripción</th>
-          </tr>
-        )}
-        {viewList == true &&
-          listItems.map(store => (
+          <table class="tablaLista">
             <tr>
-              <td>{store.nombre}</td>
-              <td>{store.rating}</td>
-              <td>{store.cantrating}</td>
-              <td>{store.rubro}</td>
-              <td>{store.dir}</td>
-              <td>{store.tel}</td>
-              <td>{store.hor}</td>
-              <td>{store.desc}</td>
+              <th>Nombre</th>
+              <th>Raiting</th>
+              <th>Califaciones</th>
+              <th>Rubro</th>
+              <th>Dirección</th>
+              <th>Telefono</th>
+              <th>Horario</th>
+              <th>Descripción</th>
             </tr>
-          ))}
+            {listItems.map(store => (
+              <tr>
+                <td>{store.nombre}</td>
+                <td>{store.rating}</td>
+                <td>{store.cantrating}</td>
+                <td>{store.rubro}</td>
+                <td>{store.dir}</td>
+                <td>{store.tel}</td>
+                <td>{store.hor}</td>
+                <td>{store.desc}</td>
+              </tr>
+            ))}
+          </table>
+        )}
       </div>
     );
   }

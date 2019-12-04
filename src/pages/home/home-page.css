@@ -341,7 +341,7 @@ Genera styles |Home
   }
   
   .chartsImgFootHeaderHome {
-    bottom: -25px;
+    bottom: -39px;
     left: 0;
     position: absolute;
     width: 100%;
@@ -579,6 +579,28 @@ Genera styles |Home
     margin: 40px 0px;
   }
   
+  .filterMaps ul li:nth-of-type(2) select {
+    text-align: center;
+    text-transform: uppercase;
+    text-align-last: center;
+    appearance: none;
+    background: url(../../assets/images/home/down.png) 98% center, url(../../assets/images/home/zona.png) left center;
+    background-size: 16px auto, 14px auto;
+    background-repeat: no-repeat, no-repeat;
+    font-size: 1.1em;
+  }
+  
+  .filterMaps ul li:nth-of-type(3) select {
+    text-align: center;
+    text-transform: uppercase;
+    text-align-last: center;
+    appearance: none;
+    background: url(../../assets/images/home/down.png) 98% center, url(../../assets/images/home/rubro.png) left center;
+    background-size: 16px auto, 20px auto;
+    background-repeat: no-repeat, no-repeat;
+    font-size: 1.1em;
+  }
+  
   .filterMaps ul {
     align-items: center;
     display: flex;
@@ -590,14 +612,13 @@ Genera styles |Home
   
   .filterMaps ul li {
     background: #4a2b94;
-    border-radius: 20px;
+    border-radius: 12px;
     color: #fff;
-    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 200px;
-    padding: 10px;
+    min-width: 200px;
+    padding: 14px 16px;
   }
   
   .filterMaps ul li label {
@@ -619,13 +640,11 @@ Genera styles |Home
     background: var(--color-gris);
     border-radius: 14px;
     border: 1px solid rgba(241, 241, 242, 1);
-    -webkit-box-shadow: inset 0px 0px 17px 0px rgba(241, 241, 242, 1);
-    -moz-box-shadow: inset 0px 0px 17px 0px rgba(241, 241, 242, 1);
-    box-shadow: inset 0px 0px 17px 0px rgba(241, 241, 242, 1);
     color: #4a2b94;
     height: 50px;
     padding-left: 20px;
     width: 200px;
+    box-shadow: inset 0px 0px 8px -4px black;
   }
   
   .filterMaps ul .textInput {
@@ -644,6 +663,10 @@ Genera styles |Home
   
   .filterMaps ul li input[type="radio"] {
     margin-right: 5px;
+    width: 1.4em;
+    height: 1.4em;
+    position: relative;
+    top: 0.3em;
   }
   
   .filterMaps ul .textInput p {
@@ -851,4 +874,14 @@ Genera styles |Home
     .slick-next {
       display: none !important;
     }
+  }
+  
+   ::selection {
+    background: #4a2b94;
+    color: white;
+  }
+  
+   ::-moz-selection {
+    background: #4a2b94;
+    color: white;
   }
