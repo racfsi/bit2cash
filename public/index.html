@@ -15,6 +15,7 @@
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
@@ -42,69 +43,4 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
   </body>
-  <script src="../src/assets/js/jquery.min.js"></script>
-  <script src="../src/assets/js/jssor.min.js"></script>
-  <script>
-  jQuery(document).ready(function ($) {
-
-var jssor_1_SlideoTransitions = [
-  [{b:0,d:1260,x:80}],
-  [{b:0,d:1260,x:500,e:{x:3}}],
-  [{b:0,d:1260,x:910}],
-  [{b:0,d:1260,x:88,e:{x:6}}],
-  [{b:0,d:1260,x:502,e:{x:9}}],
-  [{b:0,d:1260,x:910,e:{x:3}}],
-  [{b:0,d:1260,x:80}],
-  [{b:0,d:1260,x:500,e:{x:3}}],
-  [{b:0,d:1260,x:910}],
-  [{b:0,d:1260,x:88,e:{x:6}}],
-  [{b:0,d:1260,x:510,e:{x:9}}],
-  [{b:0,d:1260,x:910,e:{x:3}}]
-];
-
-var jssor_1_options = {
-  $AutoPlay: 1,
-  $FillMode: 2,
-  $CaptionSliderOptions: {
-    $Class: $JssorCaptionSlideo$,
-    $Transitions: jssor_1_SlideoTransitions
-  },
-  $ArrowNavigatorOptions: {
-    $Class: $JssorArrowNavigator$
-  },
-  $BulletNavigatorOptions: {
-    $Class: $JssorBulletNavigator$,
-    $ChanceToShow: 0
-  }
-};
-
-var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
-
-/*#region responsive code begin*/
-
-var MAX_WIDTH = 1300;
-
-function ScaleSlider() {
-    var containerElement = jssor_1_slider.$Elmt.parentNode;
-    var containerWidth = containerElement.clientWidth;
-
-    if (containerWidth) {
-
-        var expectedWidth = Math.min(MAX_WIDTH || containerWidth, containerWidth);
-
-        jssor_1_slider.$ScaleWidth(expectedWidth);
-    }
-    else {
-        window.setTimeout(ScaleSlider, 30);
-    }
-}
-
-ScaleSlider();
-
-$(window).bind("load", ScaleSlider);
-$(window).bind("resize", ScaleSlider);
-$(window).bind("orientationchange", ScaleSlider);
-/*#endregion responsive code end*/
-});
-</script>
 </html>

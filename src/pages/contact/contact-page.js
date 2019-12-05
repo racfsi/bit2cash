@@ -17,25 +17,29 @@ class Contact extends React.Component {
   // controlamos el valor de las constantes
   handleChange = input => e => {
     this.setState({ [input]: e.target.value });
-    //console.log({ [input]: e.target.value });
   };
   // cuando enviamos el formulario
   submitForm = e => {
-    // window.Email.send({
-    //   SecureToken: "a0f5e8e9-ffa6-4b5d-9603-c922452f64d4",
-    //   To: 'ruizmunozc@gmail.com',
-    //   From: "you@isp.com",
-    //   Subject: "This is the subject",
-    //   Body: "And this is the body" + this.state.nombre
-    // }).then(message => alert(message));
-    this.setState({
-      emailStatus: true
-    });
+    window.Email.send({
+      // SecureToken: "3f73680c-18df-496e-bdad-40fe91e28813",
+      Host: "smtp.elasticemail.com",
+      Username: "crcisf@gmail.com",
+      Password: "f64df06b-776e-4b8a-af05-a066de78c1dc",
+      To: "ruizmunozc@gmail.com",
+      From: "crcisf@gmail.com",
+      Subject: "Contacto Bit2Cash ",
+      Body: "Nombre: "+this.state.nombre+"<br/> Apellido: "+this.state.apellido+" <br/>Correo: "+this.state.email+" <br/>Mensaje: "+this.state.mensaje,
+    }).then(message =>
+      this.setState({
+        emailStatus: true
+      })
+    );
+
     e.preventDefault();
   };
   resetForm = e => {
     this.setState({
-      emailStatus: ''
+      emailStatus: ""
     });
     e.preventDefault();
   };
