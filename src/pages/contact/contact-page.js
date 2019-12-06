@@ -28,7 +28,7 @@ class Contact extends React.Component {
       To: "ruizmunozc@gmail.com",
       From: "crcisf@gmail.com",
       Subject: "Contacto Bit2Cash ",
-      Body: "Nombre: "+this.state.nombre+"<br/> Apellido: "+this.state.apellido+" <br/>Correo: "+this.state.email+" <br/>Mensaje: "+this.state.mensaje,
+      Body: "Nombre: "+this.state.nombre+"<br/> Apellido: "+this.state.apellido+" <br/>Correo: "+this.state.email+" <br/>Mensaje: "+this.state.mensaje+".",
     }).then(message =>
       this.setState({
         emailStatus: true
