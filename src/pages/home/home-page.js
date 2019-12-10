@@ -13,7 +13,7 @@ class Home extends React.Component {
     return (
       <div>
         <Header />
-        <section class="bannerHome woowContentFull ">
+        <section class="bannerHome woowContentFull" id="bit2chash">
           <div class="wrapperIcos">
             <div class="icoLeft">
               <img

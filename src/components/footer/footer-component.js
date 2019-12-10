@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Scrollchor from "react-scrollchor";
 /*STYLES*/
 import "./footer-component.css";
 class Footer extends React.Component {
@@ -15,10 +16,28 @@ class Footer extends React.Component {
               <h3>NOSOTROS</h3>
               <ul>
                 <li>
-                  <p>¿QUÉ ES BIT2CASH?</p>
+                  <Scrollchor
+                    to="#bit2chash"
+                    animate={{ offset: -70, duration: 500 }}
+                    spy={true}
+                    className="nav-link"
+                    onClick={this.removeClass}
+                  >
+                    ¿QUÉ ES BIT2CASH?
+                  </Scrollchor>
+                  <p></p>
                 </li>
                 <li>
-                  <p>¿CÓMO USARLO?</p>
+                  <Scrollchor
+                    to="#como-usarlo"
+                    animate={{ offset: -70, duration: 500 }}
+                    spy={true}
+                    className="nav-link"
+                    onClick={this.removeClass}
+                  >
+                    ¿CÓMO USARLO?
+                  </Scrollchor>
+                  <p></p>
                 </li>
               </ul>
             </div>
@@ -49,10 +68,28 @@ class Footer extends React.Component {
               <h3>RECURSOS</h3>
               <ul>
                 <li>
-                  <p>PRECIO DEL BITCOIN</p>
+                  <Scrollchor
+                    to="#que-es-bitcoin"
+                    animate={{ offset: -70, duration: 500 }}
+                    spy={true}
+                    className="nav-link"
+                    onClick={this.removeClass}
+                  >
+                    PRECIO DEL BITCOIN
+                  </Scrollchor>
+                  <p></p>
                 </li>
                 <li>
-                  <p>COMERCIOS BITCOIN</p>
+                  <Scrollchor
+                    to="#comercios"
+                    animate={{ offset: -70, duration: 500 }}
+                    spy={true}
+                    className="nav-link"
+                    onClick={this.removeClass}
+                  >
+                    COMERCIOS BITCOIN
+                  </Scrollchor>
+                  <p></p>
                 </li>
               </ul>
             </div>

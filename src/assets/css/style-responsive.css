@@ -295,6 +295,17 @@ Responsive Style (max-width : 480px)
 ==============================================
 */
 @media screen and (max-width: 480px) {
+  .filterMaps ul{
+    flex-wrap: wrap;
+  }
+  .filterMaps ul li{
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  .paddingLeft{
+    padding-left: 0 !important;
+    padding-top: 10px;
+  }
 }
 /*
 ==============================================

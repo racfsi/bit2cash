@@ -631,6 +631,9 @@ Genera styles |Home
     height: 100%;
     width: 100%;
   }
+  .filterMaps ul li select option{
+    color: #505050;
+  }
   
   .filterMaps ul .textInput {
     background: transparent !important;
