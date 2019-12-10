@@ -11,7 +11,7 @@ class Footer extends React.Component {
           <img src={require("../../assets/images/footer/footer-ico.png")}></img>
         </div>
         <div class="pure-g">
-          <div class="pure-u-1 pure-u-md-1-4">
+          <div class="pure-u-1-2 pure-u-sm-1-2 pure-u-md-1-4">
             <div class="infoDivFooter">
               <h3>NOSOTROS</h3>
               <ul>
@@ -42,12 +42,30 @@ class Footer extends React.Component {
               </ul>
             </div>
           </div>
-          <div class="pure-u-1 pure-u-md-1-4">
+          <div class="pure-u-1-2 pure-u-sm-1-2 pure-u-md-1-4">
             <div class="infoDivFooter">
               <h3>CONTACTO</h3>
+              <ul class="ulcontacto">
+                <li>
+                  <div class="icoFooterContac">
+                    <img
+                      src={require("../../assets/images/footer/icono-msg.png")}
+                    ></img>
+                  </div>
+                  <p>contact@bit2cash.site</p>
+                </li>
+                <li>
+                  <div class="icoFooterContac">
+                    <img
+                      src={require("../../assets/images/footer/icono-insta.png")}
+                    ></img>
+                  </div>
+                  <p>@bitcop</p>
+                </li>
+              </ul>
             </div>
           </div>
-          <div class="pure-u-1 pure-u-md-1-4">
+          <div class="pure-u-1-2 pure-u-sm-1-2 pure-u-md-1-4">
             <div class="infoDivFooter">
               <h3>LEGAL</h3>
               <ul>
@@ -55,15 +73,16 @@ class Footer extends React.Component {
                   <Link to="/terminos-y-condiciones" className="link">
                     TÉRMINOS Y CONDICIONES
                   </Link>
-                  <p></p>
                 </li>
                 <li>
-                  <p>POLÍTICA DE PRIVACIDAD</p>
+                  <Link to="/terminos-y-condiciones" className="link">
+                    POLÍTICA DE PRIVACIDAD
+                  </Link>
                 </li>
               </ul>
             </div>
           </div>
-          <div class="pure-u-1 pure-u-md-1-4">
+          <div class="pure-u-1-2 pure-u-sm-1-2 pure-u-md-1-4">
             <div class="infoDivFooter">
               <h3>RECURSOS</h3>
               <ul>

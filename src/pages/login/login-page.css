@@ -9,7 +9,7 @@ Section Login
   background-position: 60% center, center;
   background-repeat: no-repeat, no-repeat;
   background-size: 80%, cover;
-  border-top: 3px dashed var(--color-moradoSuave);
+  border-top: 3px dashed var(--color-principal);
   min-height: 1000px;
   position: relative;
   -webkit-animation: bgStars4 6s cubic-bezier(0, 0, 0, 0.98) infinite;
@@ -30,12 +30,19 @@ Section Login
 
 .sectionLogin h2 {
   color: var(--color-amarillo);
+}
+
+.txtSectionLogin {
+  color: #fff;
+  font-family: "Gotham Medium";
+  margin: 40px 0px;
   margin-bottom: 100px;
 }
 
 .sectionLogin .formContact {
   border-top-left-radius: 0;
 }
+
 
 .borderTopForm {
   background: rgba(255, 162, 0, 1);
@@ -117,7 +124,7 @@ Section Login
 }
 
 .moreLogin a {
-  color: #452f90;
+  color: var(--color-principal);
   font-family: "Gotham Medium";
   text-decoration: underline;
 }

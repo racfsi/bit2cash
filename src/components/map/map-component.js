@@ -27,8 +27,7 @@ export class Maps extends React.Component {
           rating: 4.6,
           cantrating: 700,
           zona: "Norte",
-          desc:
-            "Lorem Ipsum Dolor Sit Amet, Consectetuer Adipiscing Elit"
+          desc: "Lorem Ipsum Dolor Sit Amet, Consectetuer Adipiscing Elit"
         },
         {
           nombre: "Tostao",
@@ -41,8 +40,7 @@ export class Maps extends React.Component {
           rating: 2.6,
           cantrating: 540,
           zona: "Sur",
-          desc:
-            "Lorem Ipsum Dolor Sit Amet, Consectetuer Adipiscing Elit"
+          desc: "Lorem Ipsum Dolor Sit Amet, Consectetuer Adipiscing Elit"
         },
         {
           nombre: "Tennis",
@@ -55,8 +53,7 @@ export class Maps extends React.Component {
           rating: 4.2,
           cantrating: 10,
           zona: "Oriente",
-          desc:
-            "Lorem Ipsum Dolor Sit Amet, Consectetuer Adipiscing Elit"
+          desc: "Lorem Ipsum Dolor Sit Amet, Consectetuer Adipiscing Elit"
         },
         {
           nombre: "Adidas",
@@ -69,8 +66,7 @@ export class Maps extends React.Component {
           rating: 3.2,
           cantrating: 2,
           zona: "Occidente",
-          desc:
-            "Lorem Ipsum Dolor Sit Amet, Consectetuer Adipiscing Elit"
+          desc: "Lorem Ipsum Dolor Sit Amet, Consectetuer Adipiscing Elit"
         },
         {
           nombre: "Juan Valdez Café",
@@ -83,8 +79,7 @@ export class Maps extends React.Component {
           rating: 1.2,
           cantrating: 1,
           zona: "Norte",
-          desc:
-            "Lorem Ipsum Dolor Sit Amet, Consectetuer Adipiscing Elit"
+          desc: "Lorem Ipsum Dolor Sit Amet, Consectetuer Adipiscing Elit"
         },
         {
           nombre: "El Corral",
@@ -97,8 +92,7 @@ export class Maps extends React.Component {
           rating: 4.8,
           cantrating: 20,
           zona: "Sur",
-          desc:
-            "Lorem Ipsum Dolor Sit Amet, Consectetuer Adipiscing Elit"
+          desc: "Lorem Ipsum Dolor Sit Amet, Consectetuer Adipiscing Elit"
         }
       ]
     };
@@ -188,7 +182,7 @@ export class Maps extends React.Component {
     this.setState({
       arrayStores: actualArray
     });
-  }
+  };
   noViewInfo = e => {
     this.setState({
       view: false
@@ -271,7 +265,9 @@ export class Maps extends React.Component {
             {viewInfo == true && (
               <div class="infoMapSelectHome ">
                 <div class="closeInfoMap" onClick={this.noViewInfo}>
-                  X
+                  <img
+                    src={require("../../assets/images/comercios/close-comercios.png")}
+                  ></img>
                 </div>
                 <h3>{this.state.nombre}</h3>
                 <div class="ratingInfoMapSelectHome">

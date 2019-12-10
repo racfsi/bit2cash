@@ -31,6 +31,12 @@ class Register extends React.Component {
         <Header />
         <section class="sectionRegister sectionBeforeFooter woowContentFull">
           <h2>Registro</h2>
+          <div class="txtSectionLogin">
+            <p>
+              Para tener un registro de todos tus movimientos crea<br></br>una
+              cuenta con tus datos personales.
+            </p>
+          </div>
           <div class="formContact">
             <div class="tabLogin">
               <ul>
@@ -47,12 +53,7 @@ class Register extends React.Component {
             <div class="borderTopForm"></div>
             <form onSubmit={this.procesar}>
               <div class="pure-g">
-                <div class="pure-u-1 pure-u-md-1-1">
-                  <p>
-                    Ingresa con tus datos para ver todas las<br></br>
-                    operaciones que has realizado.
-                  </p>
-                </div>
+                <div class="pure-u-1 pure-u-md-1-1"></div>
               </div>
               <div class="pure-g">
                 <div class="pure-u-1 pure-u-md-1-2 paddingRight">

@@ -1,15 +1,51 @@
 /*
  ==============================================
- Responsive Style (max-width : 1630px)
+ Responsive Style  (max-width : 1780)
+ ==============================================
+ */
+@media screen and (max-width: 1780px) and (min-width: 1401px){
+  .bannerHome {
+    height: 100vh !important;
+    padding-top: 20px !important;
+  }
+  .titleHeaderHome {
+    width: 98%;
+  }
+  .titleHeaderHome h1 {
+    font-size: 2.8em !important;
+  }
+  .txtHeaderHome::before {
+    top: 5px !important;
+  }
+  .txtHeaderHome p {
+    font-size: 1.8em !important;
+  }
+  .stepsUseLeft img,
+  .stepsUseRight img,
+  .stepsUseOne img {
+    width: 94% !important;
+  }
+  .stepsUseMore ul li {
+    width: 100px;
+  }
+  .stepsUseMore ul li img {
+    height: auto !important;
+    width: 100% !important;
+  }
+  .divRightHeaderHome {
+    top: 100px !important;
+  }
+}
+
+/*
+ ==============================================
+ Responsive Style (max-width : 1400px)
  ==============================================
  */
 @media only screen and (max-width: 1400px) {
   .bannerHome {
     height: 100vh !important;
     padding-top: 20px !important;
-  }
-  .divLeftHeaderHome {
-    /* top: 40px !important; */
   }
   .titleHeaderHome {
     width: 90%;
@@ -295,14 +331,14 @@ Responsive Style (max-width : 480px)
 ==============================================
 */
 @media screen and (max-width: 480px) {
-  .filterMaps ul{
+  .filterMaps ul {
     flex-wrap: wrap;
   }
-  .filterMaps ul li{
+  .filterMaps ul li {
     width: 100%;
     margin-bottom: 15px;
   }
-  .paddingLeft{
+  .paddingLeft {
     padding-left: 0 !important;
     padding-top: 10px;
   }
