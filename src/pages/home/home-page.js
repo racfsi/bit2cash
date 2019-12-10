@@ -201,6 +201,7 @@ class Home extends React.Component {
         </section>
         <Footer />
       </div>
+      
     );
   }
 }

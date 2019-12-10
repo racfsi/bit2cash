@@ -1,23 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="logo192.png" />
-    <!--
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Web site created using create-react-app" />
+  <link rel="apple-touch-icon" href="logo192.png" />
+  <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <!--
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/TweenMax.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.js"></script>
+  <script src="../src/assets/js/anim.js"></script>
+  <script>
+  </script>
+  <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
       Only files inside the `public` folder can be referenced from the HTML.
@@ -26,13 +33,15 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <!--STYLE PURE-->    
-    <title>Bit2Cash</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
+  <!--STYLE PURE-->
+  <title>Bit2Cash</title>
+</head>
+
+<body>
+
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+  <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
 
@@ -42,5 +51,87 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-  </body>
+
+  <script>
+    $(document).ready(function() {
+
+
+      if ($('.icoRightTop').length > 0) {
+        var controller0 = new ScrollMagic.Controller();
+        new ScrollMagic.Scene({
+            triggerElement: ".icoRightTop",
+            triggerHook: 0.9, // show, when scrolled 10% into view
+            duration: "102%", // hide 10% before exiting view (80% + 10% from bottom)
+            offset: 30 // move trigger to center of element
+          })
+          .setClassToggle(".icoRightTop", "icoRightTopAnimate") // add class to reveal
+          .addTo(controller0);
+      }
+
+      if ($('.icoLeft').length > 0) {
+        var controller1 = new ScrollMagic.Controller();
+        new ScrollMagic.Scene({
+            triggerElement: ".icoLeft",
+            triggerHook: 0.9, // show, when scrolled 10% into view
+            duration: "102%", // hide 10% before exiting view (80% + 10% from bottom)
+            offset: 30 // move trigger to center of element
+          })
+          .setClassToggle(".icoLeft", "icoLeftAnimate") // add class to reveal
+          .addTo(controller1);
+      }
+
+      if ($('.icoRightMiddle').length > 0) {
+        var controller2 = new ScrollMagic.Controller();
+        new ScrollMagic.Scene({
+            triggerElement: ".icoRightMiddle",
+            triggerHook: 0.9, // show, when scrolled 10% into view
+            duration: "102%", // hide 10% before exiting view (80% + 10% from bottom)
+            offset: 30 // move trigger to center of element
+          })
+          .setClassToggle(".icoRightMiddle", "icoRightMiddleAnimate") // add class to reveal
+          .addTo(controller2);
+      }
+
+
+      if ($('.sectionComoUsarlo').length > 0) {
+        var controller3 = new ScrollMagic.Controller();
+        new ScrollMagic.Scene({
+            triggerElement: ".sectionComoUsarlo",
+            triggerHook: 0.9, // show, when scrolled 10% into view
+            duration: "240%", // hide 10% before exiting view (80% + 10% from bottom)
+            offset: 30 // move trigger to center of element
+          })
+          .setClassToggle(".sectionComoUsarlo", "sectionComoUsarloAnimate") // add class to reveal
+          .addTo(controller3);
+      }
+
+
+      if ($('.sectionQueEs').length > 0) {
+        var controller4 = new ScrollMagic.Controller();
+        new ScrollMagic.Scene({
+            triggerElement: ".sectionQueEs",
+            triggerHook: 0.9, // show, when scrolled 10% into view
+            duration: "120%", // hide 10% before exiting view (80% + 10% from bottom)
+            offset: -30 // move trigger to center of element
+          })
+          .setClassToggle(".sectionQueEs", "sectionQueEsAnimate") // add class to reveal
+          .addTo(controller4);
+      }
+
+      if ($('.icoRightBottom').length > 0) {
+        var controller5 = new ScrollMagic.Controller();
+        new ScrollMagic.Scene({
+            triggerElement: ".icoRightBottom",
+            triggerHook: 0.9, // show, when scrolled 10% into view
+            duration: "120%", // hide 10% before exiting view (80% + 10% from bottom)
+            offset: -30 // move trigger to center of element
+          })
+          .setClassToggle(".icoRightBottom", "icoRightBottomAnimate") // add class to reveal
+          .addTo(controller5);
+      }
+
+    });
+  </script>
+</body>
+
 </html>

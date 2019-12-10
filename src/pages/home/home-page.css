@@ -87,128 +87,64 @@ Genera styles |Home
     left: -4%;
     position: absolute;
     top: -180px;
-    -webkit-animation: icoLeft 10s cubic-bezier(0, 0, 0, 0.98) infinite;
-    animation: icoLeft 10s cubic-bezier(0, 0, 0, 0.98) infinite;
+    opacity: 0;
+    transition: all 1.4s cubic-bezier(0.6, -0.01, 0, 1.26);
   }
   
-  @keyframes icoLeft {
-    0% {
-      left: -4%;
-      opacity: 0.4;
-    }
-    25% {
-      left: 2%;
-      opacity: 0.8;
-    }
-    50% {
-      left: 0%;
-      opacity: 1;
-    }
-    75% {
-      left: 4%;
-      opacity: 0.8;
-    }
-    100% {
-      left: -4%;
-      opacity: 0.4;
-    }
+  .icoLeftAnimate {
+    left: 12%;
+    position: absolute;
+    top: -180px;
+    opacity: 1;
+    transition: all 1.4s cubic-bezier(0.6, -0.01, 0, 1.26);
   }
   
   .icoRightTop {
     position: absolute;
     top: -100px;
     left: 52%;
-    -webkit-animation: icoRightTop 8s cubic-bezier(0, 0, 0, 0.98) infinite;
-    animation: icoRightTop 8s cubic-bezier(0, 0, 0, 0.98) infinite;
+    transition: all 1s cubic-bezier(0.6, -0.01, 0, 1.26);
+  }
+  
+  .icoRightTopAnimate {
+    position: absolute;
+    top: -100px;
+    left: 40%;
+    transition: all 1s cubic-bezier(0.6, -0.01, 0, 1.26);
   }
   
   .icoRightTop img {
     height: 300px;
   }
   
-  @keyframes icoRightTop {
-    0% {
-      left: 52%;
-      opacity: 0.8;
-    }
-    25% {
-      left: 54%;
-      opacity: 0.9;
-    }
-    50% {
-      left: 52%;
-      opacity: 1;
-    }
-    75% {
-      left: 50%;
-      opacity: 0.9;
-    }
-    100% {
-      left: 52%;
-      opacity: 0.6;
-    }
-  }
-  
   .icoRightMiddle {
     position: absolute;
     right: 25%;
     top: 10%;
-    -webkit-animation: icoRightMiddle 8s cubic-bezier(0, 0, 0, 0.98) infinite;
-    animation: icoRightMiddle 8s cubic-bezier(0, 0, 0, 0.98) infinite;
+    transition: all 1.4s cubic-bezier(0.6, -0.01, 0, 1.26);
   }
   
-  @keyframes icoRightMiddle {
-    0% {
-      right: 25%;
-      opacity: 0.6;
-    }
-    25% {
-      right: 27%;
-      opacity: 0.8;
-    }
-    50% {
-      right: 24%;
-      opacity: 1;
-    }
-    75% {
-      right: 28%;
-      opacity: 0.9;
-    }
-    100% {
-      right: 25%;
-      opacity: 0.4;
-    }
+  .icoRightMiddleAnimate {
+    position: absolute;
+    right: 32%;
+    top: 10%;
+    transition: all 1.4s cubic-bezier(0.6, -0.01, 0, 1.26);
   }
   
   .icoRightBottom {
     position: absolute;
     right: 0;
     top: 50%;
-    -webkit-animation: icoRightBottom 6s cubic-bezier(0, 0, 0, 0.98) infinite;
-    animation: icoRightBottom 6s cubic-bezier(0, 0, 0, 0.98) infinite;
+    left: 56%;
+    transition: all 1.4s cubic-bezier(0.6, -0.01, 0, 1.26);
   }
   
-  @keyframes icoRightBottom {
-    0% {
-      top: 50%;
-      opacity: 0.6;
-    }
-    25% {
-      top: 62%;
-      opacity: 0.8;
-    }
-    50% {
-      top: 63%;
-      opacity: 1;
-    }
-    75% {
-      top: 61%;
-      opacity: 0.8;
-    }
-    100% {
-      top: 50%;
-      opacity: 0.6;
-    }
+  .icoRightBottomAnimate {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    left: 53%;
+    transition: all 1.4s cubic-bezier(0.6, -0.01, 0, 1.26);
   }
   
   .titleHeaderHome {
@@ -359,14 +295,23 @@ Genera styles |Home
   
   .sectionComoUsarlo {
     background: url("../../assets/images/home/stars.png"), url("../../assets/images/home/comousarlo-background.jpg");
-    background-position: center, center;
+    background-position: 150% center, center;
     background-repeat: no-repeat, no-repeat;
     background-size: cover, cover;
     min-height: 1000px;
     position: relative;
     padding-bottom: 0px;
-    -webkit-animation: bgStars 8s cubic-bezier(0, 0, 0, 0.98) infinite;
-    animation: bgStars 8s cubic-bezier(0, 0, 0, 0.98) infinite;
+    transition: all 1.8s cubic-bezier(0.6, -0.01, 0, 1.26);
+    /* -webkit-animation: bgStars 8s cubic-bezier(0, 0, 0, 0.98) infinite;
+    animation: bgStars 8s cubic-bezier(0, 0, 0, 0.98) infinite; */
+  }
+  
+  .sectionComoUsarloAnimate {
+    background: url("../../assets/images/home/stars.png"), url("../../assets/images/home/comousarlo-background.jpg");
+    background-position: 0% center, center;
+    background-repeat: no-repeat, no-repeat;
+    background-size: cover, cover;
+    transition: all 1.8s cubic-bezier(0.6, -0.01, 0, 1.26);
   }
   
   @keyframes bgStars {
@@ -631,7 +576,8 @@ Genera styles |Home
     height: 100%;
     width: 100%;
   }
-  .filterMaps ul li select option{
+  
+  .filterMaps ul li select option {
     color: #505050;
   }
   
@@ -696,13 +642,22 @@ Genera styles |Home
   
   .sectionQueEs {
     background: url("../../assets/images/home/quees-background3.png"), url("../../assets/images/home/quees-background.png"), url("../../assets/images/home/quees-background2.jpg");
-    background-position: 60% center, 70% center, center;
+    background-position: 60% center, 157% center, center;
     background-repeat: no-repeat, no-repeat, no-repeat;
     background-size: 80%, cover, cover;
     overflow: visible !important;
     position: relative;
-    -webkit-animation: bgStars2 6s cubic-bezier(0, 0, 0, 0.98) infinite;
-    animation: bgStars2 6s cubic-bezier(0, 0, 0, 0.98) infinite;
+    transition: all 1.4s cubic-bezier(0.6, -0.01, 0, 1.26);
+    /* -webkit-animation: bgStars2 6s cubic-bezier(0, 0, 0, 0.98) infinite;
+    animation: bgStars2 6s cubic-bezier(0, 0, 0, 0.98) infinite; */
+  }
+  
+  .sectionQueEsAnimate {
+    background: url("../../assets/images/home/quees-background3.png"), url("../../assets/images/home/quees-background.png"), url("../../assets/images/home/quees-background2.jpg");
+    background-position: -13% center, 70% center, center;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-size: 80%, cover, cover;
+    transition: all 1.4s cubic-bezier(0.6, -0.01, 0, 1.26);
   }
   
   @keyframes bgStars2 {
@@ -887,4 +842,30 @@ Genera styles |Home
    ::-moz-selection {
     background: #4a2b94;
     color: white;
+  }
+  
+  #reveal1 {
+    opacity: 0;
+    transform: scale(0.9);
+    background: red;
+    transition: all 1s ease-in-out;
+  }
+  
+  #reveal1.visible {
+    opacity: 1;
+    transform: none;
+    background: green;
+  }
+  
+  .box2 {
+    min-width: 50px;
+    height: 50px;
+    margin: 25px auto 25px auto;
+    background-color: blue;
+  }
+  
+  #ww {
+    width: 100%;
+    height: 50px;
+    background: red;
   }
