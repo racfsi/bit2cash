@@ -1,5 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import {
+  BrowserView,
+  MobileView,
+  isBrowser,
+  isMobile
+} from "react-device-detect";
 /*COMPONENTES*/
 import Header from "../../components/header/header-component";
 import Footer from "../../components/footer/footer-component";
@@ -105,9 +111,16 @@ class Home extends React.Component {
               </div>
             </div>
             <div class="stepsUseRight">
-              <img
-                src={require("../../assets/images/home/steps-use-2.png")}
-              ></img>
+              <BrowserView>
+                <img
+                  src={require("../../assets/images/home/steps-use-2.png")}
+                ></img>
+              </BrowserView>
+              <MobileView>
+                <img
+                  src={require("../../assets/images/home/steps-use-2_m.png")}
+                ></img>
+              </MobileView>
               <div class="stepsUseTxt">
                 <p>
                   <span>Regístrate aquí</span> llenando el formulario
@@ -118,9 +131,16 @@ class Home extends React.Component {
           </div>
           <div class="stepsUse">
             <div class="stepsUseLeft stepsUseLeft3">
-              <img
-                src={require("../../assets/images/home/steps-use-3.png")}
-              ></img>
+              <BrowserView>
+                <img
+                  src={require("../../assets/images/home/steps-use-3.png")}
+                ></img>
+              </BrowserView>
+              <MobileView>
+                <img
+                  src={require("../../assets/images/home/steps-use-3_m.png")}
+                ></img>
+              </MobileView>
               <div class="stepsUseTxt">
                 <p>
                   Abre un diálogo con <span>@bit2cashbot</span>
@@ -130,9 +150,16 @@ class Home extends React.Component {
               </div>
             </div>
             <div class="stepsUseRight stepsUseRight4">
-              <img
-                src={require("../../assets/images/home/steps-use-4.png")}
-              ></img>
+              <BrowserView>
+                <img
+                  src={require("../../assets/images/home/steps-use-4.png")}
+                ></img>
+              </BrowserView>
+              <MobileView>
+                <img
+                  src={require("../../assets/images/home/steps-use-4_m.png")}
+                ></img>
+              </MobileView>
               <div class="stepsUseTxt">
                 <p>Se generará un código QR que podrás compartir</p>
                 <p>con tus clientes y permitirles pagar </p>
@@ -140,11 +167,18 @@ class Home extends React.Component {
               </div>
             </div>
           </div>
-          <div class="stepsUse">
+          <div class="stepsUse stepsUseNoPad">
             <div class="stepsUseOne">
-              <img
-                src={require("../../assets/images/home/steps-use-5.png")}
-              ></img>
+              <BrowserView>
+                <img
+                  src={require("../../assets/images/home/steps-use-5.png")}
+                ></img>
+              </BrowserView>
+              <MobileView>
+                <img
+                  src={require("../../assets/images/home/steps-use-5_m.png")}
+                ></img>
+              </MobileView>
               <div class="stepsUseTxt">
                 <p>
                   Recibirás el monto en <strong>pesos</strong> (COP){" "}

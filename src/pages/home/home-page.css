@@ -810,6 +810,20 @@ Section before Footer
     font-size: 25px;
     margin-bottom: 100px;
   }
+  .stepsUse{
+    display: block !important;
+    padding: 0px 30px;
+    margin: 0;
+  }
+  .stepsUseNoPad{
+    padding: 0px !important;
+  }
+  .stepsUseNoPad .stepsUseTxt{
+    padding: 0px 30px !important;
+  }
+  .sectionComoUsarlo::after{
+    height: 235px;
+  }
   .divRightHeaderHome,
   .stepsUseLeft3,
   .stepsUseRight {
@@ -825,24 +839,28 @@ Section before Footer
   .infoQueEs {
     width: 100%;
   }
-  .stepsUse {
-    display: block !important;
-    margin: 0;
-  }
+  
   .stepsUseLeft img,
   .stepsUseRight img {
     width: 100%;
   }
   .stepsUseMore ul {
-    flex-wrap: wrap;
     padding: 0;
   }
   .stepsUseMore ul li {
     width: 100%;
     margin-bottom: 15px;
   }
+  .storeApps li{
+    width: 50%;
+  }
+  .storeApps li img{
+    height: auto !important;
+    width: 100% !important;
+  }
   .sectionComoUsarlo {
     min-height: auto;
+    padding: 60px 0px !important;
   }
   .stepsUseRight4 .stepsUseTxt {
     position: inherit;
@@ -852,7 +870,7 @@ Section before Footer
     top: 25px !important;
   }
   .stepsUseOne img {
-    width: 100%;
+    width: 100% !important;
   }
   .stepsUseOne .stepsUseTxt p {
     top: 0;
