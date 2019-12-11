@@ -1,11 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import ScrollMagic from "scrollmagic";
 /*COMPONENTES*/
 import Header from "../../components/header/header-component";
 import Footer from "../../components/footer/footer-component";
 /*ESTILOS*/
 import "./contact-page.css";
 class Contact extends React.Component {
+  constructor(props) {
+    super(props);
+    this.controller = new ScrollMagic.Controller();
+  }
   // constantes
   state = {
     nombre: "",
@@ -25,7 +30,7 @@ class Contact extends React.Component {
       Host: "smtp.elasticemail.com",
       Username: "crcisf@gmail.com",
       Password: "f64df06b-776e-4b8a-af05-a066de78c1dc",
-      To: "ruizmunozc@gmail.com",
+      To: "jespinosa@zocodigital.com",
       From: "crcisf@gmail.com",
       Subject: "Contacto Bit2Cash ",
       Body:
@@ -51,7 +56,16 @@ class Contact extends React.Component {
     });
     e.preventDefault();
   };
-  
+  componentDidMount() {
+    new ScrollMagic.Scene({
+      triggerElement: ".sectionContact",
+      triggerHook: 0.9,
+      duration: "120%",
+      offset: -30
+    })
+      .setClassToggle(".sectionContact", "sectionContactAnimate")
+      .addTo(this.controller);
+  }
   render() {
     const viewIco = this.state.emailStatus;
     const { nombre, apellido, email, mensaje, emailStatus } = this.state;

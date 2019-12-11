@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import ScrollMagic from "scrollmagic";
 /*COMPONENTES*/
 import Header from "../../components/header/header-component";
 import Footer from "../../components/footer/footer-component";
@@ -8,6 +9,7 @@ import "./register-page.css";
 class Register extends React.Component {
   constructor(props) {
     super(props);
+    this.controller = new ScrollMagic.Controller();
     this.state = {
       nombre: "",
       apellido: "",
@@ -24,6 +26,16 @@ class Register extends React.Component {
     this.procesar = this.procesar.bind(this);
     this.cambioEmail = this.cambioEmail.bind(this);
     this.cambioPassword = this.cambioPassword.bind(this);
+  }
+  componentDidMount() {
+    new ScrollMagic.Scene({
+      triggerElement: ".sectionRegister",
+      triggerHook: 0.9,
+      duration: "120%",
+      offset: -30
+    })
+      .setClassToggle(".sectionRegister", "sectionRegisterAnimate")
+      .addTo(this.controller);
   }
   render() {
     return (

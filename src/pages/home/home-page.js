@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import ScrollMagic from "scrollmagic";
 import {
   BrowserView,
   MobileView,
@@ -16,10 +17,62 @@ import SimpleSlider from "../../components/aliados/aliados-component";
 /*ESTILOS*/
 import "./home-page.css";
 class Home extends React.Component {
+  constructor(props) {
+    super(props);
+    this.controller = new ScrollMagic.Controller();
+  }
   componentDidMount() {
     new WOW.WOW({
       live: false
     }).init();
+    new ScrollMagic.Scene({
+      triggerElement: ".icoRightTop",
+      triggerHook: 0.9,
+      duration: "120%",
+      offset: -30
+    })
+      .setClassToggle(".icoRightTop", "icoRightTopAnimate")
+      .addTo(this.controller);
+    new ScrollMagic.Scene({
+      triggerElement: ".icoLeft",
+      triggerHook: 0.9,
+      duration: "120%",
+      offset: -30
+    })
+      .setClassToggle(".icoLeft", "icoLeftAnimate")
+      .addTo(this.controller);
+    new ScrollMagic.Scene({
+      triggerElement: ".icoRightMiddle",
+      triggerHook: 0.9,
+      duration: "120%",
+      offset: -30
+    })
+      .setClassToggle(".icoRightMiddle", "icoRightMiddleAnimate")
+      .addTo(this.controller);
+    new ScrollMagic.Scene({
+      triggerElement: ".sectionComoUsarlo",
+      triggerHook: 0.9,
+      duration: "120%",
+      offset: -30
+    })
+      .setClassToggle(".sectionComoUsarlo", "sectionComoUsarloAnimate")
+      .addTo(this.controller);
+    new ScrollMagic.Scene({
+      triggerElement: ".sectionQueEs",
+      triggerHook: 0.9,
+      duration: "120%",
+      offset: -30
+    })
+      .setClassToggle(".sectionQueEs", "sectionQueEsAnimate")
+      .addTo(this.controller);
+    new ScrollMagic.Scene({
+      triggerElement: ".icoRightBottom",
+      triggerHook: 0.9,
+      duration: "120%",
+      offset: -30
+    })
+      .setClassToggle(".icoRightBottom", "icoRightBottomAnimate")
+      .addTo(this.controller);
   }
   render() {
     const valida = 1;
@@ -93,7 +146,10 @@ class Home extends React.Component {
             </div>
           </div>
           <div class="stepsUse">
-            <div className="stepsUseLeft wow bounceInLeft" data-wow-duration="1s">
+            <div
+              className="stepsUseLeft wow bounceInLeft"
+              data-wow-duration="1s"
+            >
               <img
                 src={require("../../assets/images/home/steps-use-1.png")}
               ></img>
@@ -116,7 +172,10 @@ class Home extends React.Component {
                 </ul>
               </div>
             </div>
-            <div className="stepsUseRight wow bounceInRight" data-wow-duration="1s">
+            <div
+              className="stepsUseRight wow bounceInRight"
+              data-wow-duration="1s"
+            >
               <BrowserView>
                 <img
                   src={require("../../assets/images/home/steps-use-2.png")}
@@ -136,7 +195,10 @@ class Home extends React.Component {
             </div>
           </div>
           <div class="stepsUse">
-            <div className="stepsUseLeft stepsUseLeft3 wow bounceInLeft" data-wow-duration="1s">
+            <div
+              className="stepsUseLeft stepsUseLeft3 wow bounceInLeft"
+              data-wow-duration="1s"
+            >
               <BrowserView>
                 <img
                   src={require("../../assets/images/home/steps-use-3.png")}
@@ -155,7 +217,10 @@ class Home extends React.Component {
                 <p>de tu transacción.</p>
               </div>
             </div>
-            <div className="stepsUseRight stepsUseRight4 wow bounceInRight" data-wow-duration="1s">
+            <div
+              className="stepsUseRight stepsUseRight4 wow bounceInRight"
+              data-wow-duration="1s"
+            >
               <BrowserView>
                 <img
                   src={require("../../assets/images/home/steps-use-4.png")}
@@ -173,7 +238,10 @@ class Home extends React.Component {
               </div>
             </div>
           </div>
-          <div className="stepsUse stepsUseNoPad wow bounceInDown" data-wow-duration="1s">
+          <div
+            className="stepsUse stepsUseNoPad wow bounceInDown"
+            data-wow-duration="1s"
+          >
             <div class="stepsUseOne">
               <BrowserView>
                 <img
