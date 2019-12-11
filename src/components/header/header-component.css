@@ -19,6 +19,7 @@
   width: auto;
 }
 .am_header_nav {
+  align-items: center;
   align-content: center;
   display: flex;
   height: 100%;
@@ -37,6 +38,7 @@
   cursor: pointer;
 }
 .menuMobil {
+  align-items: center;
   align-content: center;
   display: none;
   flex-direction: column;

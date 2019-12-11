@@ -10,6 +10,7 @@ import SimpleSlider from "../../components/aliados/aliados-component";
 import "./home-page.css";
 class Home extends React.Component {
   render() {
+    const valida = 1;
     return (
       <div>
         <Header />
