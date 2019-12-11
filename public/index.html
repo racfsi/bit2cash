@@ -124,6 +124,39 @@
             .setClassToggle(".icoRightBottom", "icoRightBottomAnimate") // add class to reveal
             .addTo(controller5);
         }
+        if ($(".sectionLogin").length > 0) {
+          var controller6 = new ScrollMagic.Controller();
+          new ScrollMagic.Scene({
+            triggerElement: ".sectionLogin",
+            triggerHook: 0.9, // show, when scrolled 10% into view
+            duration: "120%", // hide 10% before exiting view (80% + 10% from bottom)
+            offset: -30 // move trigger to center of element
+          })
+            .setClassToggle(".sectionLogin", "sectionLoginAnimate") // add class to reveal
+            .addTo(controller6);
+        }
+        if ($(".sectionRegister").length > 0) {
+          var controller7 = new ScrollMagic.Controller();
+          new ScrollMagic.Scene({
+            triggerElement: ".sectionRegister",
+            triggerHook: 0.9, // show, when scrolled 10% into view
+            duration: "120%", // hide 10% before exiting view (80% + 10% from bottom)
+            offset: -30 // move trigger to center of element
+          })
+            .setClassToggle(".sectionRegister", "sectionRegisterAnimate") // add class to reveal
+            .addTo(controller7);
+        }
+        if ($(".sectionContact").length > 0) {
+          var controller8 = new ScrollMagic.Controller();
+          new ScrollMagic.Scene({
+            triggerElement: ".sectionContact",
+            triggerHook: 0.9, // show, when scrolled 10% into view
+            duration: "120%", // hide 10% before exiting view (80% + 10% from bottom)
+            offset: -30 // move trigger to center of element
+          })
+            .setClassToggle(".sectionContact", "sectionContactAnimate") // add class to reveal
+            .addTo(controller8);
+        }
       });
     </script>
   </body>

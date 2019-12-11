@@ -6,6 +6,7 @@ import {
   isBrowser,
   isMobile
 } from "react-device-detect";
+import WOW from "wowjs";
 /*COMPONENTES*/
 import Header from "../../components/header/header-component";
 import Footer from "../../components/footer/footer-component";
@@ -15,6 +16,11 @@ import SimpleSlider from "../../components/aliados/aliados-component";
 /*ESTILOS*/
 import "./home-page.css";
 class Home extends React.Component {
+  componentDidMount() {
+    new WOW.WOW({
+      live: false
+    }).init();
+  }
   render() {
     const valida = 1;
     return (
@@ -87,7 +93,7 @@ class Home extends React.Component {
             </div>
           </div>
           <div class="stepsUse">
-            <div class="stepsUseLeft">
+            <div className="stepsUseLeft wow bounceInLeft" data-wow-duration="1s">
               <img
                 src={require("../../assets/images/home/steps-use-1.png")}
               ></img>
@@ -110,7 +116,7 @@ class Home extends React.Component {
                 </ul>
               </div>
             </div>
-            <div class="stepsUseRight">
+            <div className="stepsUseRight wow bounceInRight" data-wow-duration="1s">
               <BrowserView>
                 <img
                   src={require("../../assets/images/home/steps-use-2.png")}
@@ -130,7 +136,7 @@ class Home extends React.Component {
             </div>
           </div>
           <div class="stepsUse">
-            <div class="stepsUseLeft stepsUseLeft3">
+            <div className="stepsUseLeft stepsUseLeft3 wow bounceInLeft" data-wow-duration="1s">
               <BrowserView>
                 <img
                   src={require("../../assets/images/home/steps-use-3.png")}
@@ -149,7 +155,7 @@ class Home extends React.Component {
                 <p>de tu transacción.</p>
               </div>
             </div>
-            <div class="stepsUseRight stepsUseRight4">
+            <div className="stepsUseRight stepsUseRight4 wow bounceInRight" data-wow-duration="1s">
               <BrowserView>
                 <img
                   src={require("../../assets/images/home/steps-use-4.png")}
@@ -167,7 +173,7 @@ class Home extends React.Component {
               </div>
             </div>
           </div>
-          <div class="stepsUse stepsUseNoPad">
+          <div className="stepsUse stepsUseNoPad wow bounceInDown" data-wow-duration="1s">
             <div class="stepsUseOne">
               <BrowserView>
                 <img

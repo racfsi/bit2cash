@@ -3,7 +3,7 @@
  Responsive Style  (max-width : 1780)
  ==============================================
  */
-@media screen and (max-width: 1780px) and (min-width: 1401px){
+@media screen and (max-width: 1780px) and (min-width: 1401px) {
   .bannerHome {
     height: 100vh !important;
     padding-top: 20px !important;
@@ -81,6 +81,9 @@ Responsive Style (max-width : 1024px)
 ==============================================
 */
 @media only screen and (max-width: 1024px) {
+  .divLeftHeaderHome {
+    width: 90%;
+  }
   .titleHeaderHome h1 {
     font-size: 2.5em !important;
   }
@@ -90,9 +93,34 @@ Responsive Style (max-width : 1024px)
   .txtHeaderHome p {
     font-size: 1.8em !important;
   }
+  .stepsUse {
+    flex-direction: column;
+    margin-top: 0px !important;
+  }
+  .stepsUseOne {
+    margin-top: 20px !important;
+  }
+  .stepsUseLeft3 {
+    right: 0px;
+  }
+  .stepsUseRight4 {
+    left: 0px;
+  }
+  .stepsUseRight,
+  .stepsUseLeft3,
+  .stepsUseRight4,
+  .stepsUseOne {
+    top: 0px !important;
+  }
   .stepsUseLeft img,
   .stepsUseRight img {
-    width: 80% !important;
+    width: 40% !important;
+  }
+  .stepsUseOne img {
+    width: 60% !important;
+  }
+  .stepsUseOne .stepsUseTxt {
+    margin-top: 100px;
   }
   .stepsUseMore ul li {
     width: 100px;
@@ -109,6 +137,28 @@ Responsive Style (max-width : 1024px)
   }
   .filterMaps ul li:last-child {
     margin-left: 0px;
+  }
+  .sectionComoUsarlo::after {
+    height: 350px !important;
+  }
+  /** REGISTRO Y LOGIN */
+  .formContact{
+    border-radius: 0px !important;
+  }
+  .tabLogin ul .active{
+    box-shadow: 10px 0px 8px 0 rgba(98, 96, 101) !important;
+  }
+  .tabLogin ul .noactiveLogin{
+    position: relative;
+    right: 20px;
+  }
+  .sectionRegister .tabLogin ul .active{
+    box-shadow: -10px 0px 8px 0px rgba(98, 96, 101) !important;
+    left: -20px;
+    position: relative;
+  }
+  .borderTopForm{
+    width: 100% !important;
   }
 }
 /*
@@ -227,7 +277,7 @@ Responsive Style (max-width : 768px)
     display: none;
   }
   .divLeftHeaderHome {
-    top: 50% !important;
+    /* top: 10% !important; */
   }
   .titleHeaderHome {
     width: 90% !important;
@@ -240,19 +290,19 @@ Responsive Style (max-width : 768px)
   .txtHeaderHome::before {
     top: 5px !important;
   }
+  .bannerHome {
+    height: 70vh !important;
+  }
   .bannerHome .divRightHeaderHome {
     display: none;
   }
   .stepsUse {
     flex-direction: column;
   }
-  .stepsUseOne {
-    top: 0px;
-  }
   .stepsUseRight,
   .stepsUseRight4,
   .stepsUseOne {
-    top: 50px !important;
+    top: 0px !important;
   }
   .sectionComercios {
     margin-top: 60px;

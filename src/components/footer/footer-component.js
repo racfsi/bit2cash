@@ -114,7 +114,7 @@ class Footer extends React.Component {
             </div>
           </div>
           <div class="pure-u-4-24">
-            <div className="App-logo">
+            <div className="App-logo App-logoFooter">
               <img
                 src={require("../../assets/images/footer/footer-logo.png")}
               ></img>

@@ -28,7 +28,15 @@ class Contact extends React.Component {
       To: "ruizmunozc@gmail.com",
       From: "crcisf@gmail.com",
       Subject: "Contacto Bit2Cash ",
-      Body: "Nombre: "+this.state.nombre+"<br/> Apellido: "+this.state.apellido+" <br/>Correo: "+this.state.email+" <br/>Mensaje: "+this.state.mensaje,
+      Body:
+        "Nombre: " +
+        this.state.nombre +
+        "<br/> Apellido: " +
+        this.state.apellido +
+        " <br/>Correo: " +
+        this.state.email +
+        " <br/>Mensaje: " +
+        this.state.mensaje
     }).then(message =>
       this.setState({
         emailStatus: true
@@ -43,7 +51,9 @@ class Contact extends React.Component {
     });
     e.preventDefault();
   };
+  
   render() {
+    const viewIco = this.state.emailStatus;
     const { nombre, apellido, email, mensaje, emailStatus } = this.state;
     if (!emailStatus) {
       return (
@@ -58,6 +68,12 @@ class Contact extends React.Component {
               Estamos para responder cualquier pregunta que puedas tener.
             </p>
             <div class="formContact" onSubmit={this.submitForm}>
+              <div class="wrapperHidden"></div>
+              <div class="divEnvio-L-B">
+                <img
+                  src={require("../../assets/images/contacto/envio-l-bef.png")}
+                ></img>
+              </div>
               <form>
                 <div class="pure-g">
                   <div class="pure-u-1 pure-u-md-1-2 paddingRight">
@@ -126,6 +142,17 @@ class Contact extends React.Component {
               <h2>Gracias por tu tiempo</h2>
             </div>
             <div class="formContact" onSubmit={this.submitForm}>
+              <div class="wrapperHidden"></div>
+              <div class="divEnvio-L-B">
+                <div class="airplaneL">
+                  <img
+                    src={require("../../assets/images/contacto/airplane.png")}
+                  ></img>
+                </div>
+                <img
+                  src={require("../../assets/images/contacto/envio-l-aft.png")}
+                ></img>
+              </div>
               <form>
                 <div class="pure-g">
                   <div class="pure-u-1 pure-u-md-1-1">
@@ -151,6 +178,16 @@ class Contact extends React.Component {
                   </div>
                 </div>
               </form>
+              <div class="divEnvio-R-A">
+                <div class="airplane">
+                  <img
+                    src={require("../../assets/images/contacto/airplane.png")}
+                  ></img>
+                </div>
+                <img
+                  src={require("../../assets/images/contacto/envio-r-aft.png")}
+                ></img>
+              </div>
             </div>
           </section>
           <Footer />

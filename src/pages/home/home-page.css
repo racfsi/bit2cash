@@ -562,7 +562,6 @@ Section comercio |Home
   background-repeat: no-repeat, no-repeat;
   font-size: 1.1em;
 }
-
 .filterMaps ul li:nth-of-type(3) select {
   text-align: center;
   text-transform: uppercase;
@@ -574,7 +573,10 @@ Section comercio |Home
   background-repeat: no-repeat, no-repeat;
   font-size: 1.1em;
 }
-
+.filterMaps ul li:nth-of-type(2) select:focus,
+.filterMaps ul li:nth-of-type(3) select:focus{
+  outline-color: transparent;
+}
 .filterMaps ul {
   align-items: center;
   display: flex;

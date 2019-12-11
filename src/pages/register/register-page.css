@@ -12,22 +12,15 @@ Section Login
   border-top: 3px dashed var(--color-principal);
   min-height: 1300px;
   position: relative;
-  -webkit-animation: bgStars5 6s cubic-bezier(0, 0, 0, 0.98) infinite;
-  animation: bgStars5 6s cubic-bezier(0, 0, 0, 0.98) infinite;
+  transition: all 1.8s cubic-bezier(0.6, -0.01, 0, 1.26);
 }
-
-@keyframes bgStars5 {
-  0% {
-    background-position: 60% center, center;
-  }
-  50% {
-    background-position: 80% center, center;
-  }
-  100% {
-    background-position: 60% center, center;
-  }
+.sectionRegisterAnimate {
+  background: url("../../assets/images/login/bg_bit.png"), url("../../assets/images/home/quees-background2.jpg");
+  background-position: 0% center, center;
+  background-repeat: no-repeat, no-repeat;
+  background-size: cover, cover;
+  transition: all 1.8s cubic-bezier(0.6, -0.01, 0, 1.26);
 }
-
 .sectionRegister h2 {
   color: var(--color-amarillo);
 }
@@ -61,9 +54,9 @@ Section Login
 
 @media only screen and (max-width: 480px) {
   .sectionRegister {
+    min-height: 1500px;
     padding: 15px;
     padding-bottom: 143px;
-    margin-bottom: 100px;
   }
   .sectionRegister h2 {
     font-size: 45px;

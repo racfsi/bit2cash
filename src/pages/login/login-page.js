@@ -34,7 +34,7 @@ class Login extends React.Component {
                 <li class="active">
                   <a href="">INGRESO</a>
                 </li>
-                <li class="noactive">
+                <li class="noactive noactiveLogin">
                   <Link to="/register" className="link">
                     REGISTRO
                   </Link>
